@@ -1,0 +1,66 @@
+/* Header section */
+header {
+    color: black;
+    width: 100%;
+    /* outline: 2px solid #bcbcbc; */
+    outline-offset: 0px;
+    display: flex;
+    /* border-bottom: 2px solid #bcbcbc; */
+    background-color: D7E3C3;
+}
+
+.navbar {
+    padding-bottom: 20px;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+header > * {
+    flex: 0.2;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 35px;
+    color: #000000;
+}
+
+nav i {
+    transform: scale(1);
+    padding: 2px;
+}
+
+nav a:hover {
+    color: #000000;
+    /* font-weight: bold; */ /*testing without bold */
+    text-decoration: underline;
+}
+
+.navbar .active {
+    text-decoration: underline;
+}
+
+.mantislogo {
+    padding: 10px;
+    position: static;
+}
+
+nav i {
+    color: black;
+}
+
+/* End header */

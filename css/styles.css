@@ -1,0 +1,23 @@
+@import "header.css";
+@import "mediaqueries.css";
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.headline-pages {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 38px;
+}
