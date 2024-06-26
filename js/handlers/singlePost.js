@@ -109,6 +109,7 @@ function displayPosts(posts) {
         `;
         resultContainer.appendChild(postElement);
     });
+    document.title = `${posts.title} - Mantis World`;
 }
 
 // const baseUrl =
