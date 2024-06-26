@@ -1,0 +1,215 @@
+/*Start media queries*/
+
+@media screen and (max-width: 824px) {
+    .navbar a {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .navbar a {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .header {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar {
+        text-align: center;
+        position: sticky;
+        left: 0;
+        right: 0;
+
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 25px 15px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #dfe8dd;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navbar a.active {
+        text-decoration: underline;
+        -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -moz-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -o-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        top: 6%;
+        right: 8%;
+        font-size: 3rem;
+        z-index: 10;
+        padding-left: 10px;
+    }
+
+    .hamburger-menu-close {
+        position: absolute;
+        top: 6%;
+        right: 8%;
+        font-size: 3rem;
+        display: none;
+        z-index: 10;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 1420px) {
+    .navbar a {
+        display: flex;
+        font-size: 28px;
+        gap: 89px;
+    }
+    nav {
+        padding-left: 15px;
+    }
+    header {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1420px) {
+    #open,
+    #close {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 824px) {
+    .navbar a {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .navbar a {
+        font-size: 25px;
+    }
+
+    header .mantislogo {
+        align-items: center;
+        margin-left: 0;
+        width: 70%;
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    header div {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar {
+        background-color: #d7e3c3;
+    }
+    .navbar a {
+        display: flex;
+        font-size: 28px;
+        gap: 89px;
+    }
+    nav {
+        padding-left: 15px;
+    }
+    header {
+        display: block;
+    }
+    header .mantislogo {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 25px 15px;
+        text-decoration: none;
+        text-align: center;
+        background-color: #d7e3c3;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navbar a.active {
+        text-decoration: underline;
+        -ms-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -moz-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -o-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        top: 6%;
+        right: 8%;
+        font-size: 3rem;
+        z-index: 10;
+        padding-left: 10px;
+        display: none;
+    }
+
+    .hamburger-menu-close {
+        position: absolute;
+        top: 6%;
+        right: 8%;
+        font-size: 3rem;
+        display: none;
+        z-index: 10;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 1420px) {
+    #open,
+    #close {
+        display: none;
+    }
+} */

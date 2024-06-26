@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>All Posts</title>
         <script
             src="https://kit.fontawesome.com/882a633f3c.js"
             crossorigin="anonymous"
@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/handlers/singlePost.js" type="module"></script>
         <script src="js/ui/nav.js" type="module"></script>
     </head>
     <body>
@@ -24,18 +25,22 @@
                 <iconify-icon icon="pajamas:close"></iconify-icon>
             </i>
             <nav class="navbar">
-                <a href="index.html" class="active">Home</a>
-                <a href="blogs.html">Blogs</a>
-                <div class="header-image">
+                <a href="index.html">Home</a>
+                <a href="blogs.html" class="active">Blogs</a>
                 <a href="index.html"> <img class="mantislogo" src="images/mantislogo.png" alt="Mantis World Logo" ></a>
-                </div>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
                 </a>
             </nav>
         </header>
         <main>
-        <h1>This is a testttttt</h1>
+            <div id="container-post" class="container-post"></div>
+            <section class="specific-blog-section"></section>
+            <div id="my-modal"></div>
+            <div class="modal"></div>
+            <div id="loadingIndicator" class="indicator" >Loading</div>
+            <div id="errorIndicator" class="indicator" style="display: none">An error has occurred. Please try again.</div>
+
         </main>
-    </body>
-</html>
+            </body>
+            </html>

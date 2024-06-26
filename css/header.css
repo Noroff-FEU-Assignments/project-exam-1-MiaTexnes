@@ -6,7 +6,8 @@ header {
     outline-offset: 0px;
     display: flex;
     /* border-bottom: 2px solid #bcbcbc; */
-    background-color: D7E3C3;
+    position: sticky;
+    background-color: var(--primary-main-green-color);
 }
 
 .navbar {
@@ -19,6 +20,8 @@ header {
     gap: 30px;
     margin-right: 15px;
     margin-left: 15px;
+    font-family: var(--header-font-family);
+    font-weight: 500;
 }
 
 header > * {
@@ -31,6 +34,7 @@ header {
     align-items: center;
     gap: 10px;
     padding-left: 15px;
+    background-color: var(--primary-main-green-color);
 }
 
 .navbar a {

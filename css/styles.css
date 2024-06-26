@@ -1,9 +1,12 @@
 @import "header.css";
 @import "mediaqueries.css";
+@import "api.css";
+@import "blog.css";
+@import "variables.css";
 
 
 * {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     padding: 0;
     margin: 0;
     box-sizing: border-box;

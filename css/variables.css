@@ -1,0 +1,7 @@
+:root {
+  --primary-main-green-color: #D7E3C3;
+  --header-font-family: "montserrat", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  --body-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --h1-desktop-size: font-size: 48px;
+}
