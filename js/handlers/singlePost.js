@@ -34,7 +34,7 @@ async function fetchPost(url) {
 }
 
 function showBlogPost(blogPost) {
-    document.title = `Mantis World | ${blogPost.title.rendered}`;
+    document.title = ` ${blogPost.title.rendered} | Mantis World`;
     blogPostSection.innerHTML = "";
 
     blogPostSection.innerHTML += `
@@ -109,7 +109,6 @@ function displayPosts(posts) {
         `;
         resultContainer.appendChild(postElement);
     });
-    document.title = `${posts.title} - Mantis World`;
 }
 
 // const baseUrl =

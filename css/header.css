@@ -4,7 +4,6 @@ header {
     width: 100%;
     outline-offset: 0px;
     background-color: var(--primary-main-green-color);
-
     justify-content: center;
     align-items: center;
     gap: 10px;

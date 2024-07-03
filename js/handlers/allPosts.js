@@ -13,8 +13,9 @@ function displayPosts(posts) {
     if (resultContainer) {
         resultContainer.classList.add("post-grid");
 
-        const postCards = posts.map((post) => {
-            return `
+        const postCards = posts
+            .map((post) => {
+                return `
             <a href="singlepost.html?id=${post.id}">
             <div class="post-card">
                 <h2>${post.title.rendered}</h2>
@@ -22,7 +23,8 @@ function displayPosts(posts) {
             </div>
             </a>
             `;
-        }).join("");
+            })
+            .join("");
 
         resultContainer.innerHTML = postCards;
     }
@@ -56,7 +58,6 @@ fetch(`${url}?_embed`, {
         hideLoadingIndicator(); // Ensure loading indicator is hidden on error
         showErrorIndicator(error);
     });
-
 
 // // Your existing imports
 // import { url } from "../constants.js";
