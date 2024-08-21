@@ -34,7 +34,7 @@ function displayPosts(posts) {
 showLoadingIndicator();
 
 // Fetching the posts
-fetch(`${url}?_embed`, {
+fetch(`${url}?_embed&per_page=15`, {
     method: "GET",
 })
     .then((response) => {

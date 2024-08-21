@@ -1,42 +1,19 @@
-/*Start media queries*/
-
-@media screen and (max-width: 824px) {
-    .navbar a {
-        font-size: 28px;
+/* @media screen and (min-width: 1420px) {
+    #open,
+    #close {
+        display: none;
     }
 }
-
-@media screen and (max-width: 630px) {
-    .navbar a {
-        font-size: 25px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-}
-
 @media screen and (max-width: 1420px) {
-    .header {
-        position: sticky;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
     .navbar {
         text-align: center;
         position: sticky;
         left: 0;
         right: 0;
-
         z-index: 1;
         padding: 0;
         margin: 0;
+        display: none;
     }
 
     .navbar a {
@@ -44,7 +21,6 @@
         padding: 25px 15px;
         text-decoration: none;
         text-align: center;
-        background-color: #dfe8dd;
         color: black;
         font-weight: bold;
     }
@@ -76,8 +52,23 @@
         z-index: 10;
         padding-left: 10px;
     }
-}
+    header .nav {
+        background-color: var(--primary-main-green-color);
+        height: 650px;
+    }
+
+    header {
+        background-color: var(--primary-main-green-color);
+        height: 300px;
+    }
+} */
+
+/*Start media queries*/
 @media screen and (max-width: 1420px) {
+    header div {
+        display: flex;
+        flex-direction: column;
+    }
     .navbar a {
         display: flex;
         font-size: 28px;
@@ -89,20 +80,18 @@
     header {
         display: block;
     }
-}
-
-@media screen and (min-width: 1420px) {
-    #open,
-    #close {
-        display: none;
+    header .mantislogo {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
-
-/* @media screen and (max-width: 824px) {
+@media screen and (max-width: 824px) {
     .navbar a {
         font-size: 28px;
     }
 }
+
 
 @media screen and (max-width: 630px) {
     .navbar a {
@@ -126,29 +115,6 @@
 }
 
 @media screen and (max-width: 1420px) {
-    header div {
-        display: flex;
-        flex-direction: column;
-    }
-    .navbar {
-        background-color: #d7e3c3;
-    }
-    .navbar a {
-        display: flex;
-        font-size: 28px;
-        gap: 89px;
-    }
-    nav {
-        padding-left: 15px;
-    }
-    header {
-        display: block;
-    }
-    header .mantislogo {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
     .header {
         position: relative;
         display: flex;
@@ -161,7 +127,7 @@
         position: absolute;
         left: 0;
         right: 0;
-
+        display: none;
         z-index: 1;
         padding: 0;
         margin: 0;
@@ -172,7 +138,7 @@
         padding: 25px 15px;
         text-decoration: none;
         text-align: center;
-        background-color: #d7e3c3;
+        background-color: var (--primary-main-green-color);
         color: black;
         font-weight: bold;
     }
@@ -193,7 +159,6 @@
         font-size: 3rem;
         z-index: 10;
         padding-left: 10px;
-        display: none;
     }
 
     .hamburger-menu-close {
@@ -212,4 +177,4 @@
     #close {
         display: none;
     }
-} */
+}
