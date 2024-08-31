@@ -28,11 +28,11 @@
         background-color: var(--primary-main-green-color); /* Set your desired background color */
         left: 0;
         right: 0;
-        z-index: 1;
+        /*z-index: 1; making th navbar smaløler in mobile?*/
         padding: 0;
         margin: 0;
         flex-direction: column; /* Ensure children are stacked vertically */
-        /*justify-content: center; /* Center children vertically */
+        /*justify-content: center; /* Romoved to much space mobile? */
         align-items: center; /* Center children horizontally */
     }
 
