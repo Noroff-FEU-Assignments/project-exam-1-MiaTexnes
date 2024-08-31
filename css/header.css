@@ -10,7 +10,13 @@ header {
     padding-left: 15px;
 }
 
+
+
 .navbar {
+    display: none;
+}
+
+.navbar-desktop {
     display: flex;
     align-items: center;
     justify-items: center;
@@ -22,7 +28,7 @@ header {
     font-weight: 500;
 }
 
-.navbar a {
+.navbar-desktop a {
     text-decoration: none;
     font-size: 35px;
     color: #000000;
@@ -39,7 +45,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.navbar .active {
+.navbar-desktop .active {
     text-decoration: underline;
 }
 

@@ -5,8 +5,6 @@ import {
     showErrorIndicator,
 } from "./errorAndLoading.js";
 
-
-
 const locationString = document.location.search;
 const params = new URLSearchParams(locationString);
 const idCall = params.get("id");

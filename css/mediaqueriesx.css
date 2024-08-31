@@ -1,4 +1,6 @@
-/* Styles for screens larger than 825px (desktop) */
+/* Start media queries */
+
+/* Styles for screens larger than 1420px (desktop) */
 @media screen and (min-width: 825px) {
     .navbar-mobile {
         display: none; /* Hide mobile navbar on large screens */
@@ -10,22 +12,24 @@
     #close {
         display: none; /* Hide hamburger menu icons on large screens */
     }
-    .hamburger-menu {
-        display: none;
-    }
 }
 
-/* Styles for screens smaller than 825px (mobile) */
-@media screen and (max-width: 824px) {
+/* Styles for screens between 824px and 1420px */
+@media screen and (max-width: 1420px) {
+    .header {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
     .navbar-desktop {
         display: none; /* Hide desktop navbar on smaller screens */
     }
-
     .navbar-mobile {
-        display: none; /* Hide mobile navbar by default */
+        display: none; /* Initially hide mobile navbar */
         text-align: center;
-        position: absolute;
-        background-color: var(--primary-main-green-color); /* Set your desired background color */
+        position: sticky;
         left: 0;
         right: 0;
         z-index: 1;
@@ -35,7 +39,6 @@
         justify-content: center; /* Center children vertically */
         align-items: center; /* Center children horizontally */
     }
-
     .navbar-mobile a {
         display: block;
         padding: 25px 15px;
@@ -48,28 +51,8 @@
         text-decoration: underline;
         transform: matrix(1.1, 0, 0, 1.1, 0, 0);
     }
-    .header {
-        position: sticky;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--primary-main-green-color); /* Set your desired background color */
-        z-index: 1000; /* Ensure the header is on top */
-    }
-
-    .header-mobile {
-    background-color: var(--primary-main-green-color);
-    background-image: url(../images/mantislogo.png);
-    background-size: contain; /* Ensure the image fits within the container */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center; /* Center the image within the container */
-    height: 16vh;
-    justify-content: center;
-}
-
     .header .image {
         display: block;
-        z-index: 1001; /* Ensure the logo is on top of the header */
     }
     .hamburger-menu {
         position: absolute;
@@ -96,17 +79,27 @@
     }
 }
 
-/* Additional styles for different screen sizes */
+/* Styles for screens between 630px and 824px */
+@media screen and (max-width: 824px) {
+    .navbar-mobile a {
+        font-size: 28px;
+    }
+}
+
+/* Styles for screens between 500px and 630px */
 @media screen and (max-width: 630px) {
     .navbar-mobile a {
         font-size: 25px;
     }
-
 }
 
+/* Styles for screens smaller than 500px */
 @media screen and (max-width: 500px) {
     .navbar-mobile {
+        display: flex;
+        flex-direction: column;
         height: 100%;
+        justify-content: center; /* Center children vertically */
+        align-items: center; /* Center children horizontally */
     }
-
 }
