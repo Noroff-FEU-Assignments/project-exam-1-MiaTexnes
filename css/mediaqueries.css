@@ -32,7 +32,7 @@
         padding: 0;
         margin: 0;
         flex-direction: column; /* Ensure children are stacked vertically */
-        justify-content: center; /* Center children vertically */
+        /*justify-content: center; /* Center children vertically */
         align-items: center; /* Center children horizontally */
     }
 
@@ -106,7 +106,7 @@
 
 @media screen and (max-width: 500px) {
     .navbar-mobile {
-        
+        height: 100%;
     }
 
 }
