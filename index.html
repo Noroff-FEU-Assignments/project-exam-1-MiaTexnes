@@ -8,17 +8,22 @@
             src="https://kit.fontawesome.com/882a633f3c.js"
             crossorigin="anonymous"
         ></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css" />
         <script src="js/ui/nav.js" type="module"></script>
         <script src="js/handlers/carousel.js" type="module"></script>
     </head>
     <body>
         <header>
-            <div class="header-mobile"></div>
+            <div class="header-mobile">
+                <a href="index.html" class="header-link"></a>
+            </div>
             <i id="open" class="hamburger-menu">
                 <iconify-icon icon="pajamas:hamburger"></iconify-icon>
             </i>
@@ -29,56 +34,87 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="blogs.html">Blogs</a>
                 <div class="header-image">
-                <a href="index.html"> <img class="mantislogo" src="images/mantislogo.png" alt="Mantis World Logo" ></a>
+                    <a href="index.html">
+                        <img
+                            class="mantislogo"
+                            src="images/mantislogo.png"
+                            alt="Mantis World Logo"
+                        />
+                    </a>
                 </div>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                </a>
             </nav>
             <nav class="navbar-mobile">
                 <a href="index.html" class="active">Home</a>
                 <a href="blogs.html">Blogs</a>
-                <div class="header-image">
-                </div>
+                <div class="header-image"></div>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                </a>
             </nav>
         </header>
         <main>
             <div class="index-intro">
-        <h1 class="intro-header">This is a testttttt</h1>
-        <p class="intro-text">This is some text about the Mantis World page with a lot of different and cool mantises</p>
-        <img src="images/conehead1.jpg" alt=""></div>
+                <h1 class="intro-header">Welcome to Mantis World!</h1>
+                <p class="intro-text">
+                    Explore the extraordinary world of mantises with us. Discover the beauty, diversity, and fascinating behaviors of these incredible insects. From vibrant colors to unique adaptations, each mantis has a story to tell. Dive in and be amazed!
+                </p>
+                <img src="images/conehead1.jpg" alt="" />
+            </div>
 
-        <div class="carousel">
-        <div class="carousel-images">
-            <a href="https://miatexnes.com/rainydays/giant-african-stick-mantis/" target="_blank">
-                <img src="https://miatexnes.com/rainydays/wp-content/uploads/2024/06/Giantafricanstickflickr.jpg" alt="Image 1">
-            </a>
-            <a href="https://miatexnes.com/rainydays/giant-shield-mantis/" target="_blank">
-                <img src="https://miatexnes.com/rainydays/wp-content/uploads/2024/06/GiantShieldAndrewmitchellflicr.jpg" alt="Image 2">
-            </a>
-            <a href="https://miatexnes.com/rainydays/blue-papua-giant-mantis/" target="_blank">
-                <img src="https://miatexnes.com/rainydays/wp-content/uploads/2024/06/Bluepapuagiantandrewmitchell.jpg" alt="Image 3">
-            </a>
-        </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-</main>
+            <div class="carousel">
+                <div class="carousel-images">
+                    <a
+                        href="https://miatexnes.com/rainydays/giant-african-stick-mantis/"
+                        target="_blank"
+                    >
+                        <img
+                            src="https://miatexnes.com/rainydays/wp-content/uploads/2024/06/Giantafricanstickflickr.jpg"
+                            alt="Image 1"
+                        />
+                    </a>
+                    <a
+                        href="https://miatexnes.com/rainydays/giant-shield-mantis/"
+                        target="_blank"
+                    >
+                        <img
+                            src="https://miatexnes.com/rainydays/wp-content/uploads/2024/06/GiantShieldAndrewmitchellflicr.jpg"
+                            alt="Image 2"
+                        />
+                    </a>
+                    <a
+                        href="https://miatexnes.com/rainydays/blue-papua-giant-mantis/"
+                        target="_blank"
+                    >
+                        <img
+                            src="https://miatexnes.com/rainydays/wp-content/uploads/2024/06/Bluepapuagiantandrewmitchell.jpg"
+                            alt="Image 3"
+                        />
+                    </a>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </main>
         <footer>
             <div class="footer">
                 <div class="footer-content">
                     <div class="footer-logo">
-                        <img src="images/mantislogo.png" alt="Mantis World Logo" />
+                        <img
+                            src="images/mantislogo.png"
+                            alt="Mantis World Logo"
+                        />
                     </div>
-                    <h3 class="copyright-text">All rights reserved Mantis World 2024</h3>
-                    <section class="social-media"></section>
-                    <span class="bxl--github"></span>
-                    <span class="bxl--twitter"></span>
-                    <span class="bxl--linkedin-square"></span>
-                    </div>
+                    <h3 class="copyright-text">
+                        All rights reserved Mantis World 2024
+                    </h3>
+                    <section class="social-media">
+                        <span class="bxl--github"></span>
+                        <span class="bxl--twitter"></span>
+                        <span class="bxl--linkedin-square"></span>
+                    </section>
+                </div>
+            </div>
         </footer>
     </body>
 </html>

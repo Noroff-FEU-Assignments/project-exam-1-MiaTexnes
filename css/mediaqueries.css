@@ -28,11 +28,9 @@
         background-color: var(--primary-main-green-color); /* Set your desired background color */
         left: 0;
         right: 0;
-        /*z-index: 1; making th navbar smaller in mobile?*/
         padding: 0;
         margin: 0;
         flex-direction: column; /* Ensure children are stacked vertically */
-        /*justify-content: center; /* Romoved to much space mobile? */
         align-items: center; /* Center children horizontally */
     }
 
@@ -45,10 +43,12 @@
         font-weight: bold;
         font-size: 25px;
     }
+
     .navbar-mobile a.active {
         text-decoration: underline;
         transform: matrix(1.1, 0, 0, 1.1, 0, 0);
     }
+
     .header {
         position: sticky;
         flex-direction: row;
@@ -59,30 +59,45 @@
     }
 
     .header-mobile {
-    background-color: var(--primary-main-green-color);
-    background-image: url(../images/mantislogo.png);
-    background-size: contain; /* Ensure the image fits within the container */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position:left; /* Center the image within the container */
-    height: 13vh;
-    justify-content: center;
-}
+        position: relative; /* Ensure the link is positioned relative to the header */
+        background-color: var(--primary-main-green-color);
+        background-image: url(../images/mantislogo.png);
+        background-size: contain; /* Ensure the image fits within the container */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        background-position: left; /* Position the image within the container */
+        height: 13vh;
+        justify-content: center;
+    }
 
-header {
-    padding-bottom: 15px;
-}
+    .header-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-decoration: none; /* Remove underline from the link */
+        z-index: 1; /* Ensure the link is on top of the header */
+    }
+
+    header {
+        padding-bottom: 15px;
+        display: block;
+    }
+
     .header .image {
         display: block;
         z-index: 1001; /* Ensure the logo is on top of the header */
     }
+
     .hamburger-menu {
         position: absolute;
         top: 6%;
         right: 8%;
         font-size: 2.3rem;
         z-index: 10;
-        /* padding-left: 10px; */
     }
+
     .hamburger-menu-close {
         position: absolute;
         top: 6%;
@@ -90,14 +105,36 @@ header {
         font-size: 2.3rem;
         display: none;
         z-index: 10;
-
     }
+
     nav {
         padding-left: 15px;
     }
-    header {
-        display: block;
-    }
+
+.index-intro {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 20px; /* Add space between items */
+    padding: 20px;
+}
+
+.intro-header {
+    margin: 0; /* Remove default margins */
+}
+
+.intro-text {
+    margin: 0; /* Remove default margins */
+}
+
+.index-intro img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 20vw;
+    height: auto;
+    max-height: 20vw;
+}
 }
 
 /* Additional styles for different screen sizes */
@@ -105,12 +142,10 @@ header {
     .navbar-mobile a {
         font-size: 20px;
     }
-
 }
 
 @media screen and (max-width: 500px) {
     .navbar-mobile {
         height: 51vh;
     }
-
 }
