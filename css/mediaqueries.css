@@ -38,7 +38,7 @@
 
     .navbar-mobile a {
         display: block;
-        padding: 25px 0px 0px 0px;
+        padding: 25px 15px;
         text-decoration: none;
         text-align: center;
         color: black;
@@ -93,7 +93,7 @@ header {
 
     }
     nav {
-        padding-left: 15px;
+        
     }
     header {
         display: block;
