@@ -38,3 +38,19 @@ button {
 .next {
     right: 0;
 }
+
+
+  #thumbnails {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#error-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: red;
+}

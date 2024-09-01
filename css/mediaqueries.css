@@ -43,6 +43,7 @@
         text-align: center;
         color: black;
         font-weight: bold;
+        font-size: 25px;
     }
     .navbar-mobile a.active {
         text-decoration: underline;
@@ -63,8 +64,10 @@
     background-size: contain; /* Ensure the image fits within the container */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the image within the container */
-    height: 16vh;
+    height: 13vh;
     justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
     .header .image {
@@ -75,7 +78,7 @@
         position: absolute;
         top: 6%;
         right: 8%;
-        font-size: 3rem;
+        font-size: 2.3rem;
         z-index: 10;
         padding-left: 10px;
     }
@@ -83,7 +86,7 @@
         position: absolute;
         top: 6%;
         right: 8%;
-        font-size: 3rem;
+        font-size: 2.3rem;
         display: none;
         z-index: 10;
         padding-left: 10px;
@@ -106,7 +109,7 @@
 
 @media screen and (max-width: 500px) {
     .navbar-mobile {
-        height: 100%;
+        height: 51vh;
     }
 
 }

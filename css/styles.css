@@ -4,7 +4,7 @@
 @import "blog.css";
 @import "variables.css";
 @import "footer.css";
-@import "carousel.css";
+@import "carousell.css";
 
 * {
     font-family: var(--body-font-family);

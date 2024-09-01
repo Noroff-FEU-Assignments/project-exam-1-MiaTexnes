@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://kit.fontawesome.com/882a633f3c.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/ui/nav.js" type="module"></script>
+        <script src="js/handlers/carousel.js" type="module"></script>
+        <script src="js/ui/carousel.js" type="module"></script>
+        <script src="js/ui/scroller.js" type="module"></script>
+        <script src="js/helpers/thumbnail.js" type="module"></script>
+        <script src="js/handlers/errorAndLoading.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-mobile"></div>
+            <i id="open" class="hamburger-menu">
+                <iconify-icon icon="pajamas:hamburger"></iconify-icon>
+            </i>
+            <i id="close" class="hamburger-menu-close">
+                <iconify-icon icon="pajamas:close"></iconify-icon>
+            </i>
+            <nav class="navbar-desktop">
+                <a href="index.html" class="active">Home</a>
+                <a href="blogs.html">Blogs</a>
+                <div class="header-image">
+                <a href="index.html"> <img class="mantislogo" src="images/mantislogo.png" alt="Mantis World Logo" ></a>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                </a>
+            </nav>
+            <nav class="navbar-mobile">
+                <a href="index.html" class="active">Home</a>
+                <a href="blogs.html">Blogs</a>
+                <div class="header-image">
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                </a>
+            </nav>
+        </header>
+        <main>
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="loader"></div>
+            </div>
+
+            <div class="container-post" id="container-post"></div>
+            <div class="thumbnail-grid"></div>
+
+            <div class="carousel-buttons">
+                <button class="left-button" id="left">
+                <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="right-button" id="right">
+                <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+</main>
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="images/mantislogo.png" alt="Mantis World Logo" />
+                    </div>
+                    <h3 class="copyright-text">All rights reserved Mantis World 2024</h3>
+                    <section class="social-media"></section>
+                    <span class="bxl--github"></span>
+                    <span class="bxl--twitter"></span>
+                    <span class="bxl--linkedin-square"></span>
+                    </div>
+        </footer>
+    </body>
+</html>
