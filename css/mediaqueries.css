@@ -38,7 +38,7 @@
 
     .navbar-mobile a {
         display: block;
-        padding: 25px 15px;
+        padding: 25px 0px 0px 0px;
         text-decoration: none;
         text-align: center;
         color: black;
