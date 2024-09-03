@@ -114,8 +114,13 @@
     nav {
         padding-left: 15px;
     }
-
-
+       .footer-logo img {
+  height: 10vh;
+}
+.bxl--github {
+width: 2em;
+height: 2em;
+}
 }
 
 /* Additional styles for different screen sizes */
