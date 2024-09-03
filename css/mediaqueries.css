@@ -67,6 +67,7 @@
         background-position: left; /* Position the image within the container */
         height: 13vh;
         justify-content: center;
+        padding: 10px 0px 10px 0px;
     }
 
     .header-link {
@@ -111,30 +112,7 @@
         padding-left: 15px;
     }
 
-.index-intro {
-    display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    gap: 20px; /* Add space between items */
-    padding: 20px;
-}
 
-.intro-header {
-    margin: 0; /* Remove default margins */
-}
-
-.intro-text {
-    margin: 0; /* Remove default margins */
-}
-
-.index-intro img {
-    border-radius: 50%;
-    width: 100%;
-    max-width: 20vw;
-    height: auto;
-    max-height: 20vw;
-}
 }
 
 /* Additional styles for different screen sizes */
@@ -146,6 +124,6 @@
 
 @media screen and (max-width: 500px) {
     .navbar-mobile {
-        height: 51vh;
+        height: 55vw;
     }
 }
