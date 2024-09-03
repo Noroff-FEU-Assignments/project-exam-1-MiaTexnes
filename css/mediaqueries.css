@@ -32,6 +32,7 @@
         margin: 0;
         flex-direction: column; /* Ensure children are stacked vertically */
         align-items: center; /* Center children horizontally */
+        overflow: hidden;
     }
 
     .navbar-mobile a {
