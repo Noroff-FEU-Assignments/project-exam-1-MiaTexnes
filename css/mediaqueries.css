@@ -42,6 +42,7 @@
         color: black;
         font-weight: bold;
         font-size: 25px;
+        overflow-x: hidden;
     }
 
     .navbar-mobile a.active {
