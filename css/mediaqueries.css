@@ -94,18 +94,20 @@
     .hamburger-menu {
         position: absolute;
         top: 6%;
-        right: 8%;
+        /* right: 8%; */
         font-size: 2.3rem;
         z-index: 10;
+        left: 80%;
     }
 
     .hamburger-menu-close {
         position: absolute;
         top: 6%;
-        right: 8%;
+        /* right: 8%; */
         font-size: 2.3rem;
         display: none;
         z-index: 10;
+        left: 80%;
     }
 
     nav {
