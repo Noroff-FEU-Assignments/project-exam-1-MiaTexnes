@@ -27,8 +27,12 @@ body {
     font-size: 38px;
 }
 
+.top-header {
+    display: flex;
+    justify-content: center;
+}
 
-.intro-header {
+.latest-posts {
     display: flex;
     justify-content: center;
 }

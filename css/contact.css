@@ -20,10 +20,6 @@
     flex-direction: column;
 }
 
-.contact-form h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
 
 .contact-form label {
     display: block;
