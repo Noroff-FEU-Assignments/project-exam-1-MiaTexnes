@@ -10,7 +10,7 @@
     max-width: 600px; /* Increase the max width */
     width: 100%; /* Ensure it takes full width of its container */
     padding: 20px;
-    background-color: white;
+    background-color: var(--primary-main-green-color);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
