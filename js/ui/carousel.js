@@ -2,7 +2,7 @@ import { url } from "../constants.js";
 const prev = document.querySelector("#prev-btn");
 const next = document.querySelector("#next-btn");
 const list = document.querySelector("#item-list");
-const itemwidth = 250; // Fixed width of 300px
+const itemwidth = 230; // Fixed width of 230px
 const padding = 8; // Adjust padding if needed
 
 // Function to fetch posts (assuming this function is defined in another file)
