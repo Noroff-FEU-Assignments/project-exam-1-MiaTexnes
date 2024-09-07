@@ -6,14 +6,18 @@ import {
     showErrorIndicator,
 } from "./errorAndLoading.js";
 
-// Selecting the container for the posts
+// Selecting the container for the posts and the view more button
 const resultContainer = document.querySelector("#container-post");
+const viewMoreContainer = document.querySelector("#view-more-container");
 
-function displayPosts(posts) {
+function displayPosts(posts, initialCount = 10) {
     if (resultContainer) {
         resultContainer.classList.add("post-grid");
 
-        const postCards = posts
+        const initialPosts = posts.slice(0, initialCount);
+        const remainingPosts = posts.slice(initialCount);
+
+        const postCards = initialPosts
             .map((post) => {
                 return `
             <a href="singlepost.html?id=${post.id}">
@@ -27,6 +31,45 @@ function displayPosts(posts) {
             .join("");
 
         resultContainer.innerHTML = postCards;
+
+        if (remainingPosts.length > 0) {
+            const remainingPostCards = remainingPosts
+                .map((post) => {
+                    return `
+                <a href="singlepost.html?id=${post.id}" class="additional-post hidden">
+                <div class="post-card">
+                    <h2>${post.title.rendered}</h2>
+                    <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}">
+                </div>
+                </a>
+                `;
+                })
+                .join("");
+
+            resultContainer.innerHTML += remainingPostCards;
+
+            const viewMoreButton = document.createElement("button");
+            viewMoreButton.textContent = "View More";
+            viewMoreButton.classList.add("view-more-button");
+            viewMoreContainer.appendChild(viewMoreButton); // Append the button to the view-more-container
+
+            let isShowingMore = false;
+
+            viewMoreButton.addEventListener("click", () => {
+                const additionalPosts =
+                    document.querySelectorAll(".additional-post");
+                additionalPosts.forEach((post) => {
+                    post.classList.toggle("hidden");
+                });
+
+                if (isShowingMore) {
+                    viewMoreButton.textContent = "View More";
+                } else {
+                    viewMoreButton.textContent = "View Less";
+                }
+                isShowingMore = !isShowingMore;
+            });
+        }
     }
 }
 
@@ -51,7 +94,7 @@ fetch(`${url}?_embed&per_page=15`, {
         hideLoadingIndicator();
         resultContainer.innerHTML = "";
 
-        displayPosts(posts);
+        displayPosts(posts, 12); // Display only 10 posts initially
     })
     .catch((error) => {
         console.error(error);

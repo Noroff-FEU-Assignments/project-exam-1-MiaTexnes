@@ -13,13 +13,23 @@
     .hamburger-menu {
         display: none;
     }
+
 }
+
+
 
 /* Styles for screens smaller than 825px (mobile) */
 @media screen and (max-width: 824px) {
     .navbar-desktop {
         display: none; /* Hide desktop navbar on smaller screens */
     }
+
+    .post-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 20px;
+}
 
     .navbar-mobile {
         display: none; /* Hide mobile navbar by default */
@@ -118,8 +128,7 @@
   height: 10vh;
 }
 .bxl--github {
-width: 2em;
-height: 2em;
+  height: 5vh;
 }
 }
 
@@ -128,6 +137,7 @@ height: 2em;
     .navbar-mobile a {
         font-size: 20px;
     }
+
 }
 
 @media screen and (max-width: 500px) {

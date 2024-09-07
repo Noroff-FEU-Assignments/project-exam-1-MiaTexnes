@@ -18,6 +18,13 @@
   cursor: pointer;
 }
 
+.specific-blog-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -38,7 +45,15 @@
 }
 
 .wp-block-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.wp-block-image img {
   margin: 0;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 footer {

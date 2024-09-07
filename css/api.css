@@ -1,21 +1,122 @@
 .post-card {
     text-align: center;
     margin-bottom: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-top: 2rem;
     padding: 1rem;
     box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
     border-radius: 10%;
     transition: box-shadow 0.3s ease-in-out;
-    font-size: 0.7em;
+    background-color: rgba(150, 217, 150, 0.352);
+    width: 100%; /* Make the card take full width of its container */
+    max-width: 300px; /* Optional: Set a max width */
+}
+
+.post-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.post-card:hover {
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+#container-post * {
+    text-decoration: none !important;
+    color: black;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Maximum 3 columns */
+    grid-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.post-grid .post {
+    margin-bottom: 30px;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .post-card img {
-    /* max-width: 80%; */
-    max-width: 300px;
+    flex: 1;
+    text-align: center;
+    max-width: 100%; /* Make the image responsive */
     max-height: 300px;
+    border-radius: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+.view-more-button {
+    display: inline-block;
+    padding: 0.5em 1.4em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    background-color: var(--primary-main-green-color);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.view-more-button:hover {
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Center the button */
+#view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Optional: Add some space above the button */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .post-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Maximum 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .post-grid {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+}
+/* .post-card {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 10%;
+    transition: box-shadow 0.3s ease-in-out;
+    background-color: rgba(150, 217, 150, 0.352);
+}
+
+.post-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.post-card:hover {
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 #container-post * {
@@ -31,8 +132,8 @@
 }
 
 .post-grid .post {
-    flex: 0 0 calc(33.33% - 15px); /* 33.33% for 3 items in a row, 10px for some space between the items */
-    margin-bottom: 30px; /* Add some vertical space between the rows */
+    flex: 0 0 calc(33.33% - 15px);
+    margin-bottom: 30px;
 }
 
 .post-card {
@@ -48,4 +149,5 @@
     text-align: center;
     max-width: 300px;
     max-height: 300px;
-}
+    border-radius: 10%;
+} */

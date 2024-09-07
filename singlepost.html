@@ -18,19 +18,36 @@
     </head>
     <body>
         <header>
+            <div class="header-mobile">
+                <a href="index.html" class="header-link"></a>
+            </div>
             <i id="open" class="hamburger-menu">
                 <iconify-icon icon="pajamas:hamburger"></iconify-icon>
             </i>
             <i id="close" class="hamburger-menu-close">
                 <iconify-icon icon="pajamas:close"></iconify-icon>
             </i>
-            <nav class="navbar">
-                <a class="div1" href="index.html">Home</a>
-                <a class="div2" href="blogs.html" class="active">Blogs</a>
-<a href="index.html"> <img class="mantislogo" src="images/mantislogo.png" alt="Mantis World Logo" ></a>
-                <a class="div3" href="about.html">About</a>
-                <a class="div4" href="contact.html">Contact</a>
-                </a>
+            <nav class="navbar-desktop">
+                <a href="index.html" class="active">Home</a>
+                <a href="blogs.html">Blogs</a>
+                <div class="header-image">
+                    <a href="index.html">
+                        <img
+                            class="mantislogo"
+                            src="images/mantislogo.png"
+                            alt="Mantis World Logo"
+                        />
+                    </a>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <nav class="navbar-mobile">
+                <a href="index.html">Home</a>
+                <a href="blogs.html" class="active">Blogs</a>
+                <div class="header-image"></div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </header>
         <main>
