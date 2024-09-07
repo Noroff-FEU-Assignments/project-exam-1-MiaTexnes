@@ -36,7 +36,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 900px) {
     .carousel-view {
-        width: calc(250px * 2); /* Show 2 items at a time */
+        width: calc(280px * 2); /* Show 2 items at a time */
     }
     .item-list {
         height: 280px; /* Fixed height of 250px */
@@ -44,7 +44,7 @@
 
 @media (max-width: 600px) {
     .carousel-view {
-        width: 250px; /* Show 1 item at a time */
+        width: 280px; /* Show 1 item at a time */
     }
     .item-list {
         height: 280px; /* Fixed height of 250px */
