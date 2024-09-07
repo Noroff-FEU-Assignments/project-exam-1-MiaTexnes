@@ -75,3 +75,12 @@ body {
     max-width: 20vw;
     margin: auto;
 }
+
+.about-text {
+    text-align: center;
+    margin: 3px 40px 3px 40px;
+}
+
+.about-text p {
+    margin: 30px;
+}
