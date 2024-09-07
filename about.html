@@ -18,19 +18,36 @@
     </head>
     <body>
         <header>
+            <div class="header-mobile">
+                <a href="index.html" class="header-link"></a>
+            </div>
             <i id="open" class="hamburger-menu">
                 <iconify-icon icon="pajamas:hamburger"></iconify-icon>
             </i>
             <i id="close" class="hamburger-menu-close">
                 <iconify-icon icon="pajamas:close"></iconify-icon>
             </i>
-            <nav class="navbar">
+            <nav class="navbar-desktop">
+                <a href="index.html" >Home</a>
+                <a href="blogs.html">Blogs</a>
+                <div class="header-image">
+                    <a href="index.html">
+                        <img
+                            class="mantislogo"
+                            src="images/mantislogo.png"
+                            alt="Mantis World Logo"
+                        />
+                    </a>
+                </div>
+                <a href="about.html"class="active">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <nav class="navbar-mobile">
                 <a href="index.html">Home</a>
                 <a href="blogs.html">Blogs</a>
-                <a href="index.html"> <img class="mantislogo" src="images/mantislogo.png" alt="Mantis World Logo" ></a>
+                <div class="header-image"></div>
                 <a href="about.html" class="active">About</a>
                 <a href="contact.html">Contact</a>
-                </a>
             </nav>
         </header>
         <main>
@@ -39,5 +56,25 @@
 <div class="About-content"></div>
 </div>
         </main>
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img
+                            src="images/mantislogo.png"
+                            alt="Mantis World Logo"
+                        />
+                    </div>
+                    <h3 class="copyright-text">
+                        All rights reserved Mantis World 2024
+                    </h3>
+                    <section class="social-media">
+                        <span class="bxl--github"></span>
+                        <span class="bxl--twitter"></span>
+                        <span class="bxl--linkedin-square"></span>
+                    </section>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

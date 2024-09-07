@@ -5,6 +5,7 @@
 @import "variables.css";
 @import "footer.css";
 @import "carousell.css";
+@import "contact.css";
 
 * {
     font-family: var(--body-font-family);

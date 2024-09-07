@@ -1,0 +1,81 @@
+#contact-page {
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    max-width: 600px; /* Increase the max width */
+    width: 100%; /* Ensure it takes full width of its container */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Specific rule for the textarea with ID message */
+#message {
+    height: 150px; /* Set the desired height */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#errorMessages {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 90%; /* Reduce max width for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        max-width: 100%; /* Full width for very small screens */
+        padding: 10px; /* Adjust padding */
+    }
+}

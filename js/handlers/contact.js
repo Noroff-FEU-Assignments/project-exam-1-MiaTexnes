@@ -1,25 +1,39 @@
-const url =
-    "https://cors.noroff.dev/https://miatexnes.com/rainydays/wp-json/wp/v2/pages/130/";
+// script.js
+document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
 
-async function fetchContactPage() {
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(
-                `There was an error fetching the contact page: ${response.statusText}`
-            );
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const errorMessages = document.getElementById("errorMessages");
+
+        let errors = [];
+
+        if (name === "") {
+            errors.push("Name is required.");
         }
 
-        const contactPage = await response.json();
+        if (email === "") {
+            errors.push("Email is required.");
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            errors.push("Email is invalid.");
+        }
 
-        const contactContainer = document.querySelector("#contact-container");
-        contactContainer.innerHTML = `
-            <h1 class="contact-headline">${contactPage.title.rendered}</h1>
-            <div class="contact-content">${contactPage.content.rendered}</div>
-        `;
-    } catch (error) {
-        console.error(error);
-    }
-}
+        if (subject === "") {
+            errors.push("Subject is required.");
+        }
 
-fetchContactPage();
+        if (message === "") {
+            errors.push("Message is required.");
+        }
+
+        if (errors.length > 0) {
+            errorMessages.innerHTML = errors.join("<br>");
+        } else {
+            errorMessages.innerHTML = "Form submitted successfully!";
+            // Here you can add code to actually submit the form
+        }
+    });
