@@ -124,9 +124,7 @@
     nav {
         padding-left: 15px;
     }
-       .footer-logo img {
-  height: 10vh;
-}
+
 .bxl--github {
   height: 5vh;
 }
@@ -140,8 +138,3 @@
 
 }
 
-@media screen and (max-width: 500px) {
-    .navbar-mobile {
-        height: 70vw;
-    }
-}

@@ -1,8 +1,8 @@
+@import "variables.css";
 @import "header.css";
 @import "mediaqueries.css";
 @import "api.css";
 @import "blog.css";
-@import "variables.css";
 @import "footer.css";
 @import "carousel.css";
 @import "contact.css";
