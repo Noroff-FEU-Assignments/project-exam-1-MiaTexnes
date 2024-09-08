@@ -22,6 +22,27 @@
         <link rel="stylesheet" href="css/styles.css" />
         <script src="js/ui/nav.js" type="module"></script>
         <script src="js/ui/carousel.js" type="module"></script>
+        <!-- Hotjar Tracking Code for Mantis World -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj =
+                    h.hj ||
+                    function () {
+                        (h.hj.q = h.hj.q || []).push(arguments);
+                    };
+                h._hjSettings = { hjid: 5127131, hjsv: 6 };
+                a = o.getElementsByTagName("head")[0];
+                r = o.createElement("script");
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(
+                window,
+                document,
+                "https://static.hotjar.com/c/hotjar-",
+                ".js?sv="
+            );
+        </script>
     </head>
     <body>
         <header>
@@ -67,18 +88,21 @@
                     adaptations, each mantis has a story to tell. Dive in and be
                     amazed!
                 </p>
-                <img src="images/conehead1.jpg" alt="A pink, green, black and yellow mantis standing up" />
+                <img
+                    src="images/conehead1.jpg"
+                    alt="A pink, green, black and yellow mantis standing up"
+                />
             </div>
             <h2 class="latest-posts">Latest Posts</h2>
             <div class="carousel-container">
-        <div class="carousel-view">
-            <button id="prev-btn" class="prev-btn">Prev</button>
-            <div id="item-list" class="item-list">
-                <!--Items will be dynamically inserted here-->
+                <div class="carousel-view">
+                    <button id="prev-btn" class="prev-btn">Prev</button>
+                    <div id="item-list" class="item-list">
+                        <!--Items will be dynamically inserted here-->
+                    </div>
+                    <button id="next-btn" class="next-btn">Next</button>
+                </div>
             </div>
-            <button id="next-btn" class="next-btn">Next</button>
-        </div>
-    </div>
         </main>
         <footer>
             <div class="footer">

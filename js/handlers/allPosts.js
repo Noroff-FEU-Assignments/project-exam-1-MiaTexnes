@@ -105,5 +105,3 @@ async function fetchAndDisplayPosts() {
 
 // Fetch and display posts on page load
 document.addEventListener("DOMContentLoaded", fetchAndDisplayPosts);
-
-

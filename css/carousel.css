@@ -42,6 +42,7 @@
     height: 100%;
     object-fit: unset;
     border-radius: 5px;
+    contain: size;
 }
 
 #next-btn, #prev-btn {

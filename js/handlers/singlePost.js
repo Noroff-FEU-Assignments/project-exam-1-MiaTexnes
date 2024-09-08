@@ -113,6 +113,14 @@ function displayPosts(posts) {
     });
 }
 
+// Add this code at the end of the file
+document.addEventListener("DOMContentLoaded", () => {
+    const paragraphs = document.querySelectorAll(".specific-blog-section p");
+    paragraphs.forEach((paragraph) => {
+        paragraph.innerHTML = paragraph.innerHTML.replace(/:/g, "&nbsp;:");
+    });
+});
+
 // const baseUrl =
 //     "https://cors.noroff.dev/https://www.miatexnes.com/rainydays/wp-json/wp/v2/posts";
 

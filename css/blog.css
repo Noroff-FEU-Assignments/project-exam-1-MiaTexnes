@@ -25,6 +25,17 @@
   align-items: center; /* Center vertically if needed */
 }
 
+.specific-blog-section p {
+  text-align: center; /* Center the text */
+  margin: 0 auto; /* Center the paragraph block */
+  padding: 0 20px; /* Increase space on the sides */
+  max-width: 800px; /* Optional: Limit the width of the paragraph */
+}
+
+.specific-blog-section p::before {
+  content: " "; /* Add a space before each colon */
+}
+
 .modal {
   display: none;
   position: fixed;
