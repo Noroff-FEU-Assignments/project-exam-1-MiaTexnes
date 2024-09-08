@@ -1,5 +1,3 @@
-// loader.js
-
 // Function to dynamically load CSS files
 function loadCSS(href) {
     const link = document.createElement("link");
@@ -59,7 +57,8 @@ function loadResources() {
             // Add specific resources for about.html if needed
             break;
         case "contact.html":
-            // Add specific resources for contact.html if needed
+            loadCSS("css/contact.css");
+            loadJS("js/handlers/contact.js", "module");
             break;
         case "singlepost.html":
             loadJS("js/handlers/singlePost.js", "module");

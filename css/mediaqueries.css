@@ -13,10 +13,7 @@
     .hamburger-menu {
         display: none;
     }
-
 }
-
-
 
 /* Styles for screens smaller than 825px (mobile) */
 @media screen and (max-width: 824px) {
@@ -25,17 +22,19 @@
     }
 
     .post-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
-    margin-bottom: 20px;
-}
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        margin-bottom: 20px;
+    }
 
     .navbar-mobile {
         display: none; /* Hide mobile navbar by default */
         text-align: center;
         position: absolute;
-        background-color: var(--primary-main-green-color); /* Set your desired background color */
+        background-color: var(
+            --primary-main-green-color
+        ); /* Set your desired background color */
         left: 0;
         right: 0;
         padding: 0;
@@ -65,7 +64,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: var(--primary-main-green-color); /* Set your desired background color */
+        background-color: var(
+            --primary-main-green-color
+        ); /* Set your desired background color */
         z-index: 1000; /* Ensure the header is on top */
     }
 
@@ -125,9 +126,9 @@
         padding-left: 15px;
     }
 
-.bxl--github {
-  height: 5vh;
-}
+    .bxl--github {
+        height: 5vh;
+    }
 }
 
 /* Additional styles for different screen sizes */
@@ -135,6 +136,4 @@
     .navbar-mobile a {
         font-size: 20px;
     }
-
 }
-

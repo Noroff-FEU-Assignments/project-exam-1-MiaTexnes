@@ -1,19 +1,4 @@
-/*const openIcon = document.querySelector("#open");
-const closeIcon = document.querySelector("#close");
-
-if (openIcon && closeIcon) {
-    openIcon.addEventListener("click", function () {
-        openIcon.style.display = "none";
-        document.querySelector(".navbar-mobile").style.display = "block";
-        closeIcon.style.display = "block";
-    });
-
-    closeIcon.addEventListener("click", function () {
-        closeIcon.style.display = "none";
-        document.querySelector(".navbar-mobile").style.display = "none";
-        openIcon.style.display = "block";
-    });
-*/
+// Description: Navigation bar UI
 const favicons = [
     {
         rel: "apple-touch-icon",

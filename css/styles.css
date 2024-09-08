@@ -1,4 +1,5 @@
 @import "variables.css";
+@import "main.css";
 @import "header.css";
 @import "mediaqueries.css";
 @import "api.css";
@@ -6,14 +7,6 @@
 @import "footer.css";
 @import "carousel.css";
 @import "contact.css";
-
-* {
-    font-family: var(--body-font-family);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-}
 
 .headline-pages {
     text-align: center;
@@ -62,6 +55,7 @@
     justify-content: center;
     height: 100vh;
 }
+
 .wp-image-167 {
     border-radius: 50%;
     padding-top: 20px;
@@ -69,6 +63,17 @@
     height: auto;
     max-height: 20vw;
     max-width: 20vw;
+    margin: auto;
+}
+
+.about-img {
+    display: flex;
+    border-radius: 20%;
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    max-height: 30vw;
+    max-width: 30vw;
     margin: auto;
 }
 
@@ -103,6 +108,7 @@
     animation: pulse 1.5s infinite;
     margin: 10px;
 }
+
 /* Error indicator styles */
 #errorIndicator {
     display: flex;
@@ -132,22 +138,4 @@
         transform: scale(1);
         opacity: 1;
     }
-}
-
-.spin-loader {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255,255,255,.3);
-  border-radius: 50%;
-  border-top-color: #fff;
-  animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
 }
