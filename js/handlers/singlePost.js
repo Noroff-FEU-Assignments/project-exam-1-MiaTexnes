@@ -22,6 +22,7 @@ async function fetchPost(url) {
         }
         const post = await response.json();
         showBlogPost(post);
+        document.title = `${post.title.rendered} - MantisWorld`; // Set the document title
         console.log(post);
     } catch (error) {
         console.error("Error fetching post:", error);
@@ -32,7 +33,7 @@ async function fetchPost(url) {
 }
 
 function showBlogPost(blogPost) {
-    document.title = ` ${blogPost.title.rendered} | Mantis World`;
+    document.title = `${blogPost.title.rendered} - MantisWorld`;
     blogPostSection.innerHTML = "";
 
     blogPostSection.innerHTML += `
@@ -49,11 +50,14 @@ function showBlogPost(blogPost) {
     const modalImg = document.getElementById("modalImage");
 
     blogImages.forEach((image) => {
+        // Set the alt text for each image
+        const altText = image.alt || "Image"; // Use the alt attribute or a default value
         image.addEventListener("click", function () {
             modal.style.display = "flex";
             modal.style.justifyContent = "center";
             modal.style.alignItems = "center";
             modalImg.src = this.src;
+            modalImg.alt = altText; // Set the alt text for the modal image
         });
     });
 

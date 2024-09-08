@@ -1,6 +1,6 @@
 // Selecting the containers for the error and loading indicators
-const errorIndicator = document.querySelector("#error-indicator");
-const loadingIndicator = document.querySelector("#loading-indicator");
+const errorIndicator = document.querySelector("#errorIndicator");
+const loadingIndicator = document.querySelector("#loadingIndicator");
 
 // Function to show the loading indicator
 export function showLoadingIndicator() {

@@ -74,6 +74,13 @@
     margin-top: 20px; /* Optional: Add some space above the button */
 }
 
+#loadingIndicqaator {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Optional: Add some space above the loading indicator */
+    color: black;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .post-grid {

@@ -19,11 +19,13 @@ function displayPosts(posts, initialCount = 10) {
 
         const postCards = initialPosts
             .map((post) => {
+                const altText =
+                    post._embedded["wp:featuredmedia"][0].alt_text || "Image"; // Fetch alt text
                 return `
             <a href="singlepost.html?id=${post.id}">
             <div class="post-card">
                 <h2>${post.title.rendered}</h2>
-                <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}">
+                <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${altText}">
             </div>
             </a>
             `;
@@ -35,11 +37,14 @@ function displayPosts(posts, initialCount = 10) {
         if (remainingPosts.length > 0) {
             const remainingPostCards = remainingPosts
                 .map((post) => {
+                    const altText =
+                        post._embedded["wp:featuredmedia"][0].alt_text ||
+                        "Image"; // Fetch alt text
                     return `
                 <a href="singlepost.html?id=${post.id}" class="additional-post hidden">
                 <div class="post-card">
                     <h2>${post.title.rendered}</h2>
-                    <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post._embedded["wp:featuredmedia"][0].alt_text}">
+                    <img src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${altText}">
                 </div>
                 </a>
                 `;
@@ -73,91 +78,32 @@ function displayPosts(posts, initialCount = 10) {
     }
 }
 
-// Showing the loading indicator
-showLoadingIndicator();
-
-// Fetching the posts
-fetch(`${url}?_embed&per_page=15`, {
-    method: "GET",
-})
-    .then((response) => {
+// Function to fetch and display posts
+async function fetchAndDisplayPosts() {
+    showLoadingIndicator(); // Show loading indicator
+    try {
+        const response = await fetch(`${url}?_embed&per_page=15`, {
+            method: "GET",
+        });
         if (!response.ok) {
             throw new Error(`Error fetching posts: ${response.status}`);
         }
-        return response.json();
-    })
-    .then((posts) => {
+        const posts = await response.json();
         if (!Array.isArray(posts)) {
             throw new Error("Posts are not an array");
         }
 
-        hideLoadingIndicator();
         resultContainer.innerHTML = "";
-
-        displayPosts(posts, 12); // Display only 10 posts initially
-    })
-    .catch((error) => {
+        displayPosts(posts, 12); // Display only 12 posts initially
+    } catch (error) {
         console.error(error);
-        hideLoadingIndicator(); // Ensure loading indicator is hidden on error
-        showErrorIndicator(error);
-    });
+        showErrorIndicator(error); // Show error indicator
+    } finally {
+        hideLoadingIndicator(); // Ensure loading indicator is hidden
+    }
+}
 
-// // Your existing imports
-// import { url } from "../constants.js";
-// import {
-//     showLoadingIndicator,
-//     hideLoadingIndicator,
-//     showErrorIndicator,
-// } from "./errorAndLoading.js";
+// Fetch and display posts on page load
+document.addEventListener("DOMContentLoaded", fetchAndDisplayPosts);
 
-// //Selecting the container for the posts
-// const resultContainer = document.querySelector("#container-post");
 
-// function displayPosts(posts) {
-//     if (resultContainer) {
-//         resultContainer.classList.add("post-grid");
-
-//         const postCards = posts
-//         .map((post) => {
-//             return `
-//             <div class="post-card">
-//                 <h2>${post.title.rendered}</h2>
-//                 <img>${post.featured_media}</img>
-//             </div>
-//             <p class="backButton">Back</p>
-//             `;
-//         })
-//             .join("");
-
-//         resultContainer.innerHTML = postCards;
-//     }
-// }
-
-// //Showing the loading indicator
-// showLoadingIndicator();
-
-// //Fetching the posts
-// fetch(url, {
-//     method: "GET",
-// })
-//     .then((response) => {
-//         if (!response.ok) {
-//             throw new Error('Error fetching posts:${response.status}');
-//         }
-//         return response.json();
-//     })
-//     .then((posts) => {
-//         if (!Array.isArray(posts)) {
-//             throw new Error("Posts are not an array");
-//         }
-
-//         hideLoadingIndicator();
-//         resultContainer.innerHTML = "";
-
-//         displayPosts(posts);
-//     })
-
-//     .catch((error) => {
-//         console.error(error);
-//         showErrorIndicator(error);
-//     });

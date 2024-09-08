@@ -20,7 +20,6 @@
     flex-direction: column;
 }
 
-
 .contact-form label {
     display: block;
     margin-bottom: 5px;
@@ -44,16 +43,18 @@
 .contact-form button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: var(--button-color);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    font-weight: bold;
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: green;
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.085);
 }
 
 #errorMessages {

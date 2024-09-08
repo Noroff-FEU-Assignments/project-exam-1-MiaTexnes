@@ -15,11 +15,6 @@
     background-repeat: no-repeat;
 }
 
-body {
-    /* width: 100vw;
-    overflow-x: hidden; */
-}
-
 .headline-pages {
     text-align: center;
     padding-top: 20px;
@@ -84,4 +79,12 @@ body {
 
 .about-text p {
     margin: 30px;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: black;
 }

@@ -12,11 +12,18 @@
 
 #item-list {
     display: flex;
-    overflow-x: auto;
+
     scroll-behavior: smooth;
     height: 280px; /* Fixed height of 300px */
-
+    overflow-x: hidden;
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
 }
+.item-list::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
 
 .carousel-item {
     flex: 0 0 230px; /* Fixed width of 300px */
@@ -24,13 +31,37 @@
     box-sizing: border-box;
     border-radius: 5px;
     text-align: center;
+    color: black;
 }
+
+
+
 
 .carousel-item img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; Ensure images fit within the item without being cropped incorrectly */
+    object-fit: unset;
     border-radius: 5px;
+}
+
+#next-btn, #prev-btn {
+  display: inline-block;
+    padding: 0.5em 0.8em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    background-color: var(--primary-main-green-color);
+    text-align: center;
+    transition: all 0.2s;
+}
+#prev-btn:hover {
+box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.23);
+}
+#next-btn:hover {
+box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.23);
 }
 
 /* Media Queries for Responsiveness */
