@@ -2,6 +2,8 @@ import { url } from "../constants.js";
 const prev = document.querySelector("#prev-btn");
 const next = document.querySelector("#next-btn");
 const list = document.querySelector("#item-list");
+const loadingIndicator = document.querySelector("#loadingIndicator");
+const errorIndicator = document.querySelector("#errorIndicator");
 const itemwidth = 230; // Fixed width of 230px
 const padding = 8; // Adjust padding if needed
 
@@ -23,9 +25,18 @@ async function fetchPosts() {
 
 // Function to create and insert post items into the carousel
 async function displayPosts() {
+    // Show loading indicator
+    loadingIndicator.style.display = "block";
+    errorIndicator.style.display = "none";
+
     const posts = await fetchPosts();
+
+    // Hide loading indicator
+    loadingIndicator.style.display = "none";
+
     if (posts.length === 0) {
         console.error("No posts to display");
+        errorIndicator.style.display = "block";
         return;
     }
 

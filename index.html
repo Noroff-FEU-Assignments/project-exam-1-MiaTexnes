@@ -79,6 +79,7 @@
             </nav>
         </header>
         <main>
+
             <h1 class="top-header">Welcome to Mantis World!</h1>
             <div class="index-intro">
                 <p class="intro-text">
@@ -94,7 +95,14 @@
                 />
             </div>
             <h2 class="latest-posts">Latest Posts</h2>
+                <div class="indicator">
+                <div id="loadingIndicator">Loading...</div>
+            </div>
+            <div id="errorIndicator" class="indicator" style="display: none">
+                An error has occurred. Please try again.
+            </div>
             <div class="carousel-container">
+
                 <div class="carousel-view">
                     <button id="prev-btn" class="prev-btn">Prev</button>
                     <div id="item-list" class="item-list">
