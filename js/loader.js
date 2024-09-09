@@ -53,14 +53,14 @@ function loadResources() {
         case "blogs":
             loadJS("js/handlers/allPosts.js", "module");
             break;
-        case "about.html":
+        case "about":
             // Add specific resources for about.html if needed
             break;
-        case "contact.html":
+        case "contact":
             loadCSS("css/contact.css");
             loadJS("js/handlers/contact.js", "module");
             break;
-        case "singlepost.html":
+        case "singlepost":
             loadJS("js/handlers/singlePost.js", "module");
             break;
         default:
