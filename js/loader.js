@@ -6,11 +6,20 @@ function loadCSS(href) {
     document.head.appendChild(link);
 }
 
-// Function to dynamically load JS files
-function loadJS(src, type = "text/javascript") {
+// Function to dynamically load JS files with optional defer or async attributes
+function loadJS(src, type = "text/javascript", async = false, defer = false) {
     const script = document.createElement("script");
     script.src = src;
     script.type = type;
+    if (async) {
+        script.async = true;
+    }
+    if (defer) {
+        script.defer = true;
+    }
+    script.onerror = function () {
+        console.error(`Failed to load script: ${src}`);
+    };
     document.head.appendChild(script);
 }
 
@@ -25,18 +34,21 @@ function loadPreconnect(href, crossorigin = false) {
     document.head.appendChild(link);
 }
 
-// Function to load resources based on the current page
-function loadResources() {
-    const path = window.location.pathname;
-    const page = path.split("/").pop();
-
-    // Common resources for all pages
+// Function to load common resources
+function loadCommonResources() {
+    console.log("Loading common resources...");
     loadCSS("css/styles.css");
     loadJS(
-        "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+        "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+        "text/javascript",
+        true
     );
-    loadJS("https://kit.fontawesome.com/882a633f3c.js", "text/javascript");
-    loadJS("js/ui/nav.js", "module");
+    loadJS(
+        "https://kit.fontawesome.com/882a633f3c.js",
+        "text/javascript",
+        true
+    );
+    loadJS("js/ui/nav.js", "module", true);
 
     // Preconnect links for Google Fonts
     loadPreconnect("https://fonts.googleapis.com");
@@ -44,29 +56,48 @@ function loadResources() {
     loadCSS(
         "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     );
+}
 
-    // Page-specific resources
+// Function to load page-specific resources
+function loadPageSpecificResources(page) {
+    console.log(`Loading resources for page: ${page}`);
     switch (page) {
         case "index":
-            loadJS("js/ui/carousel.js", "module"); // Corrected path
+            console.log("Loading index.html specific resources...");
+            loadJS("js/ui/carousel.js", "module", true); // Adding async attribute
             break;
-        case "blogs":
-            loadJS("js/handlers/allPosts.js", "module");
+        case "blogs.html":
+            loadJS("js/handlers/allPosts.js", "module", true);
             break;
-        case "about":
+        case "about.html":
             // Add specific resources for about.html if needed
             break;
-        case "contact":
-            loadCSS("css/contact.css");
-            loadJS("js/handlers/contact.js", "module");
+        case "contact.html":
+            loadJS("js/handlers/contact.js", "module", true);
             break;
-        case "singlepost":
-            loadJS("js/handlers/singlePost.js", "module");
+        case "singlepost.html":
+            loadJS("js/handlers/singlePost.js", "module", true);
+            break;
+        case "apiPage.html":
+            loadJS("js/handlers/apiHandler.js", "module", true);
             break;
         default:
-            // Default resources for other pages
+            console.log("No specific resources to load for this page.");
             break;
     }
+}
+
+// Function to load resources based on the current page
+function loadResources() {
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    console.log(`Current page: ${page}`);
+
+    // Load common resources
+    loadCommonResources();
+
+    // Load page-specific resources
+    loadPageSpecificResources(page);
 
     // Hotjar Tracking Code for Mantis World
     (function (h, o, t, j, a, r) {

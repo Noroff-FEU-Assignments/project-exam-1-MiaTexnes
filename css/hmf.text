@@ -1,88 +1,121 @@
-.carousel-container {
-    overflow: hidden;
-    width: 100%;
+// loader.js
+
+// Function to dynamically load CSS files
+function loadCSS(href) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
 }
 
-.carousel-view {
-    display: flex;
-    align-items: center;
-    width: calc(245px * 3); /* Show 3 items at a time */
-    margin: 0 auto; /* Center the carousel */
-}
-
-#item-list {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    height: 280px; /* Fixed height of 300px */
-
-}
-
-.carousel-item {
-    flex: 0 0 230px; /* Fixed width of 300px */
-    height: 230px; /* Fixed height of 300px */
-    box-sizing: border-box;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-#next-btn, #prev-btn {
-  display: inline-block;
-    padding: 0.5em 0.8em;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 10px;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    background-color: var(--primary-main-green-color);
-    text-align: center;
-    transition: all 0.2s;
-}
-#prev-btn:hover {
-box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.23);
-}
-#next-btn:hover {
-box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.23);
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 900px) {
-    .carousel-view {
-        width: calc(280px * 2); /* Show 2 items at a time */
+// Function to dynamically load JS files with optional defer or async attributes
+function loadJS(src, type = "text/javascript", async = false, defer = false) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.type = type;
+    if (async) {
+        script.async = true;
     }
-    .item-list {
-        height: 280px; /* Fixed height of 250px */
-}
-}
-
-
-@media (max-width: 600px) {
-    .carousel-view {
-        width: 280px; /* Show 1 item at a time */
+    if (defer) {
+        script.defer = true;
     }
-    .item-list {
-        height: 280px; /* Fixed height of 250px */
+    script.onerror = function () {
+        console.error(`Failed to load script: ${src}`);
+    };
+    document.head.appendChild(script);
 }
+
+// Function to dynamically load preconnect links
+function loadPreconnect(href, crossorigin = false) {
+    const link = document.createElement("link");
+    link.rel = "preconnect";
+    link.href = href;
+    if (crossorigin) {
+        link.crossOrigin = "anonymous";
+    }
+    document.head.appendChild(link);
 }
 
+// Function to load common resources
+function loadCommonResources() {
+    console.log("Loading common resources...");
+    loadCSS("css/styles.css");
+    loadJS(
+        "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+        "text/javascript",
+        true
+    );
+    loadJS(
+        "https://kit.fontawesome.com/882a633f3c.js",
+        "text/javascript",
+        true
+    );
+    loadJS("js/ui/nav.js", "module", true);
 
+    // Preconnect links for Google Fonts
+    loadPreconnect("https://fonts.googleapis.com");
+    loadPreconnect("https://fonts.gstatic.com", true);
+    loadCSS(
+        "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    );
+}
 
+// Function to load page-specific resources
+function loadPageSpecificResources(page) {
+    console.log(`Loading resources for page: ${page}`);
+    switch (page) {
+        case "index.html":
+            console.log("Loading index.html specific resources...");
+            loadJS("js/ui/carousel.js", "module");
+            break;
+        case "blogs.html":
+            loadJS("js/handlers/allPosts.js", "module", true);
+            break;
+        case "about.html":
+            // Add specific resources for about.html if needed
+            break;
+        case "contact.html":
+            loadJS("js/handlers/contact.js", "module", true);
+            break;
+        case "singlepost.html":
+            loadJS("js/handlers/singlePost.js", "module", true);
+            break;
+        case "apiPage.html":
+            loadJS("js/handlers/apiHandler.js", "module", true);
+            break;
+        default:
+            console.log("No specific resources to load for this page.");
+            break;
+    }
+}
 
-<h2 class="latest-posts">Latest Posts</h2>
-            <div class="carousel-container">
-        <div class="carousel-view">
-            <button id="prev-btn" class="prev-btn">Prev</button>
-            <div id="item-list" class="item-list">
-                <!--Items will be dynamically inserted here-->
-            </div>
-            <button id="next-btn" class="next-btn">Next</button>
-        </div>
-    </div>
+// Function to load resources based on the current page
+function loadResources() {
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    console.log(`Current page: ${page}`);
+
+    // Load common resources
+    loadCommonResources();
+
+    // Load page-specific resources
+    loadPageSpecificResources(page);
+
+    // Hotjar Tracking Code for Mantis World
+    (function (h, o, t, j, a, r) {
+        h.hj =
+            h.hj ||
+            function () {
+                (h.hj.q = h.hj.q || []).push(arguments);
+            };
+        h._hjSettings = { hjid: 5127131, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+}
+
+// Load resources when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", loadResources);
