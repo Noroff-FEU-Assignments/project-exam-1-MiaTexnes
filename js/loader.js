@@ -58,7 +58,6 @@ function loadResources() {
             break;
         case "contact.html":
             loadJS("js/handlers/contact.js", "module");
-            loadCSS("css/contact.css");
             break;
         case "singlepost.html":
             loadJS("js/handlers/singlePost.js", "module");
