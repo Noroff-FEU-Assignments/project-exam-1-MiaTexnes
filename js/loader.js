@@ -72,7 +72,7 @@ function loadPageSpecificResources(page) {
         case "about.html":
             // Add specific resources for about.html if needed
             break;
-        case "contact.html":
+        case "contact":
             loadJS("js/handlers/contact.js", "module", true);
             break;
         case "singlepost.html":
