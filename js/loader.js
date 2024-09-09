@@ -47,16 +47,17 @@ function loadResources() {
 
     // Page-specific resources
     switch (page) {
-        case "index.html":
+        case "index":
             loadJS("js/ui/carousel.js", "module"); // Corrected path
             break;
-        case "blogs.html":
+        case "blogs":
             loadJS("js/handlers/allPosts.js", "module");
             break;
         case "about.html":
             // Add specific resources for about.html if needed
             break;
         case "contact.html":
+            loadCSS("css/contact.css");
             loadJS("js/handlers/contact.js", "module");
             break;
         case "singlepost.html":
