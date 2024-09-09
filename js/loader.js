@@ -57,8 +57,8 @@ function loadResources() {
             // Add specific resources for about.html if needed
             break;
         case "contact.html":
-            loadCSS("css/contact.css");
             loadJS("js/handlers/contact.js", "module");
+            loadCSS("css/contact.css");
             break;
         case "singlepost.html":
             loadJS("js/handlers/singlePost.js", "module");
