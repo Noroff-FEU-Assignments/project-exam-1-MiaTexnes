@@ -79,6 +79,11 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 824px) {
+    .bxl--github {
+        height: 5vh;
+    }
+}
 @media screen and (max-width: 500px) {
     .footer-content {
         display: flex;
