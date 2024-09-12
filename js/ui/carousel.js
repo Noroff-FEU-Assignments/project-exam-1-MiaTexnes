@@ -26,7 +26,7 @@ export async function fetchPosts() {
 // Function to create and insert post items into the carousel
 export async function displayPosts() {
     // Show loading indicator
-    loadingIndicator.style.display = "block";
+    // loadingIndicator.style.display = "block";
     errorIndicator.style.display = "none";
 
     const posts = await fetchPosts();
