@@ -136,4 +136,10 @@
     .navbar-mobile a {
         font-size: 20px;
     }
+    .top-header {
+        font-size: var(--h1-mobile-size);
+    }
+    .index-intro p {
+        font-size: 20px;
+    }
 }

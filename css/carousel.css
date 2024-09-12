@@ -6,7 +6,7 @@
 .carousel-view {
     display: flex;
     align-items: center;
-    width: calc(245px * 3); /* Show 3 items at a time */
+    width: calc(260px * 3); /* Show 3 items at a time */
     margin: 0 auto; /* Center the carousel */
 }
 
@@ -64,7 +64,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 900px) {
     .carousel-view {
-        width: calc(280px * 2); /* Show 2 items at a time */
+        width: calc(260px * 2); /* Show 2 items at a time */
     }
     .item-list {
         height: 280px; /* Fixed height of 250px */
@@ -73,7 +73,7 @@
 
 @media (max-width: 600px) {
     .carousel-view {
-        width: 280px; /* Show 1 item at a time */
+        width: 260px; /* Show 1 item at a time */
     }
     .item-list {
         height: 280px; /* Fixed height of 250px */
