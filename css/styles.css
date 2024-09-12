@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .latest-posts {
@@ -69,7 +70,6 @@
 .about-img {
     display: flex;
     border-radius: 20%;
-    padding-top: 20px;
     width: 100%;
     height: auto;
     max-height: 30vw;
