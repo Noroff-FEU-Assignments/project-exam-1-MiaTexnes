@@ -10,12 +10,17 @@
     flex-direction: column;
     justify-content: space-between; /* Ensure content is spaced evenly */
     height: 100%; /* Ensure the card takes full height of its container */
+    font-size: var(--h3-desktop-size); /* Adjusted font size for consistency */
 }
 
-.post-card h2 {
+.post-card h3{
+   font-size: calc(0.5rem + 1vw);
+}
+
+/* .post-card h2 {
     font-size: 1.5em;
     margin-bottom: 0.5rem;
-}
+} */
 
 .post-card:hover {
     box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
