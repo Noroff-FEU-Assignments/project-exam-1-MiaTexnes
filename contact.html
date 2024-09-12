@@ -8,20 +8,23 @@
             name="description"
             content="Mantis World contact page for sending messages to us"
         />
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-        <script src="js/loader.js"></script>
-        <script src="js/handlers/contact.js" type="module"></script>
-        <script src="js/ui/nav.js" type="module"></script>
+        <script
+            src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+            defer
+        ></script>
+        <script src="js/loader.js" defer></script>
+        <script src="js/handlers/contact.js" type="module" defer></script>
+        <script src="js/ui/nav.js" type="module" defer></script>
     </head>
     <body>
         <header>
             <div class="header-mobile">
                 <a href="index.html" class="header-link"></a>
             </div>
-            <i id="open" class="hamburger-menu">
+            <i id="open" class="hamburger-menu" aria-label="Open menu">
                 <iconify-icon icon="pajamas:hamburger"></iconify-icon>
             </i>
-            <i id="close" class="hamburger-menu-close">
+            <i id="close" class="hamburger-menu-close" aria-label="Close menu">
                 <iconify-icon icon="pajamas:close"></iconify-icon>
             </i>
             <nav class="navbar-desktop">
@@ -50,47 +53,48 @@
         <main>
             <h1 class="top-header">Contact Us</h1>
             <div id="contact-page">
-               <div class="contact-form">
-    <form id="contactForm">
-        <label for="name">Name:</label>
-        <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Please write your full name here"
-        />
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <label for="name">Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Please write your full name here"
+                        />
 
-        <label for="email">Email:</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Please write your email here"
-        />
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="Please write your email here"
+                        />
 
-        <label for="subject">Subject:</label>
-        <input
-            type="text"
-            id="subject"
-            name="subject"
-            required
-            placeholder="Please write the subject here"
-        />
+                        <label for="subject">Subject:</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            required
+                            placeholder="Please write the subject here"
+                        />
 
-        <label for="message">Message:</label>
-        <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Please write your message here"
-        ></textarea>
+                        <label for="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            placeholder="Please write your message here"
+                        ></textarea>
 
-        <button type="submit">Submit</button>
-    </form>
-    <div id="errorMessages"></div>
-</div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="errorMessages"></div>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="footer">
@@ -105,9 +109,12 @@
                         All rights reserved Mantis World 2024
                     </h3>
                     <section class="social-media">
-                        <span class="bxl--github"></span>
-                        <span class="bxl--twitter"></span>
-                        <span class="bxl--linkedin-square"></span>
+                        <span class="bxl--github" aria-label="GitHub"></span>
+                        <span class="bxl--twitter" aria-label="Twitter"></span>
+                        <span
+                            class="bxl--linkedin-square"
+                            aria-label="LinkedIn"
+                        ></span>
                     </section>
                 </div>
             </div>
