@@ -10,7 +10,7 @@ import {
 const resultContainer = document.querySelector("#container-post");
 const viewMoreContainer = document.querySelector("#view-more-container");
 
-function displayPosts(posts, initialCount = 10) {
+export function displayPosts(posts, initialCount = 10) {
     if (resultContainer) {
         resultContainer.classList.add("post-grid");
 
