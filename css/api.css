@@ -9,9 +9,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensure content is spaced evenly */
-    height: 350px; /* Adjusted height for consistency */
+    height: 330px; /* Adjusted height for consistency */
     font-size: var(--h3-desktop-size); /* Adjusted font size for consistency */
-    width: 350px;
+    width: 330px;
 }
 
 .post-card h3 {
