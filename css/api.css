@@ -11,6 +11,7 @@
     justify-content: space-between; /* Ensure content is spaced evenly */
     height: 100%; /* Ensure the card takes full height of its container */
     font-size: var(--h3-desktop-size); /* Adjusted font size for consistency */
+    max-width: 380px;
 }
 
 .post-card h3 {
@@ -102,7 +103,7 @@
 
 @media (max-width: 480px) {
     .post-grid {
-        grid-template-columns: 1fr; /* Single column layout for very small screens */
+        grid-template-columns: 2fr; /* Single column layout for very small screens */
     }
 }
 /* .post-card {
