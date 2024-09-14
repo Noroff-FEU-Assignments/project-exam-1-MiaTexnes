@@ -77,7 +77,7 @@
 
 @media (max-width: 600px) {
     .carousel-view {
-        width: calc(240px * 2); /* Show 1 item at a time */
+        width: calc(240px * 1.5); /* Show 1 item at a time */
     }
     .item-list {
         height: 320px; /* Fixed height of 250px */
