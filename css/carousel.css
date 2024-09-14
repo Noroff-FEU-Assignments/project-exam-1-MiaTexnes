@@ -1,3 +1,4 @@
+
 .carousel-container {
     overflow: visible;
     width: 100%;
@@ -6,13 +7,13 @@
 .carousel-view {
     display: flex;
     align-items: center;
-    width: calc(240px * 3); /* Show 3 items at a time */
+    width: calc(240px * 4); /* Show 3 items at a time */
     margin: 0 auto; /* Center the carousel */
+    contain: layout style;
 }
 
 #item-list {
     display: flex;
-
     scroll-behavior: smooth;
     height: 320px; /* Fixed height of 300px */
     overflow-x: visible;
@@ -23,7 +24,7 @@
     display: none; /* for Chrome, Safari, and Opera */
 }
 
-.carousel-item {
+.carousel-item{
     flex: 0 0 240px; /* Fixed width of 300px */
     height: 300px; /* Fixed height of 300px */
     box-sizing: border-box;
@@ -39,7 +40,9 @@
     object-fit: unset;
     border-radius: 5px;
     contain: size;
+    aspect-ratio: 1/1;
 }
+
 
 #next-btn,
 #prev-btn {
@@ -65,7 +68,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 900px) {
     .carousel-view {
-        width: calc(240px * 2); /* Show 2 items at a time */
+        width: calc(240px * 3); /* Show 2 items at a time */
     }
     .item-list {
         height: 320px; /* Fixed height of 250px */
@@ -74,7 +77,7 @@
 
 @media (max-width: 600px) {
     .carousel-view {
-        width: calc(240px * 1.2); /* Show 1 item at a time */
+        width: calc(240px * 2); /* Show 1 item at a time */
     }
     .item-list {
         height: 320px; /* Fixed height of 250px */

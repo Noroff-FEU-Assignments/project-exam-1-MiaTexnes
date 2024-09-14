@@ -10,12 +10,12 @@ const padding = 8; // Adjust padding if needed
 // Function to fetch posts (assuming this function is defined in another file)
 async function fetchPosts() {
     try {
-        const response = await fetch(`${url}?_embed&per_page=10`);
+        const response = await fetch(`${url}?_embed&per_page=6`);
         if (!response.ok) {
             throw new Error(`Error fetching posts: ${response.status}`);
         }
         const posts = await response.json();
-        return posts; // Get the first 10 posts
+        return posts; // Get the first 6 posts
     } catch (error) {
         console.error("Error in fetchPosts:", error);
         return [];
@@ -73,9 +73,9 @@ function createCarouselItem(post) {
     const item = document.createElement("a");
     item.href = `singlepost.html?id=${post.id}`;
     item.classList.add("carousel-item");
-    item.style.width = `${itemwidth}px`;
-    item.style.height = `250px`; // Fixed height of 250px
-    item.style.padding = `${padding / 2}px`;
+    // item.style.width = `${itemwidth}px`;
+    item.style.height = `300px`; // Fixed height of 300px
+    // item.style.padding = `${padding / 2}px`;
     const altText = post._embedded["wp:featuredmedia"][0].alt_text || "Image"; // Fetch alt text
     item.innerHTML = `
         <div class="post-card">
