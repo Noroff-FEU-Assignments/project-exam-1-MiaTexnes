@@ -68,6 +68,7 @@
     width: auto;
     height: auto;
     object-fit: contain;
+    margin-bottom: 10px;
 }
 
 .specific-blog-title {
