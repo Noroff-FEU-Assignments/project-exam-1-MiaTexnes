@@ -50,8 +50,8 @@ h1 {
     border-radius: 50%;
     width: 100%;
     height: auto;
-    max-height: 20vw;
-    max-width: 20vw;
+    max-height: 30vh;
+    max-width: 30vw;
     justify-self: center; /* Center the image horizontally */
     align-self: center; /* Center the image vertically */
     padding-top: 0; /* Remove padding-top */
