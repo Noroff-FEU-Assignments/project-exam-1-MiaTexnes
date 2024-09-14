@@ -36,7 +36,7 @@ function showBlogPost(blogPost) {
     blogPostSection.innerHTML = "";
 
     blogPostSection.innerHTML += `
-    <h2 class="specific-blog-title">${blogPost.title.rendered}</h2>
+    <h1 class="top-header">${blogPost.title.rendered}</h1>
     <div class="specific-blog-section">
         ${blogPost.content.rendered}
     </div>
@@ -105,7 +105,7 @@ function displayPosts(posts) {
     posts.forEach((post) => {
         const postElement = document.createElement("div");
         postElement.innerHTML = `
-            <h2>${post.title.rendered}</h2>
+            <h1>${post.title.rendered}</h1>
             <div>${post.excerpt.rendered}</div>
         `;
         resultContainer.appendChild(postElement);
