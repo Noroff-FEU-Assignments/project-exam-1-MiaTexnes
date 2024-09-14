@@ -4,13 +4,10 @@
 
 /* Styles for screens smaller than 825px (mobile) */
 @media screen and (max-width: 824px) {
-    .index-intro {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
+    body .index-intro {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
 }
 
