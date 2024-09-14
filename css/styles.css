@@ -145,6 +145,10 @@ h1 {
         transform: scale(1);
         opacity: 1;
     }
+    }
+
+    #sort-container {
+        text-align: center;
 }
 
 /* Styles for screens larger than 825px (desktop) */
