@@ -50,4 +50,17 @@ if (openIcon && closeIcon && navbarMobile) {
         navbarMobile.style.display = "none";
         openIcon.style.display = "block";
     });
+
+    // Add event listener to the document to close navbar when clicking outside
+    document.addEventListener("click", function (event) {
+        if (
+            navbarMobile.style.display === "flex" &&
+            !navbarMobile.contains(event.target) &&
+            !openIcon.contains(event.target)
+        ) {
+            closeIcon.style.display = "none";
+            navbarMobile.style.display = "none";
+            openIcon.style.display = "block";
+        }
+    });
 }

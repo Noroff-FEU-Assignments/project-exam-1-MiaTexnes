@@ -22,8 +22,7 @@ async function fetchPost(url) {
         }
         const post = await response.json();
         showBlogPost(post);
-        document.title = `${post.title.rendered} - MantisWorld`; // Set the document title
-        console.log(post);
+        document.title = `${post.title.rendered} - MantisWorld`;
     } catch (error) {
         console.error("Error fetching post:", error);
         showErrorIndicator(); // Show error indicator

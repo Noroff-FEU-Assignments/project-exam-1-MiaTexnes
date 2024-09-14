@@ -9,6 +9,36 @@ import {
 // Selecting the container for the posts and the view more button
 const resultContainer = document.querySelector("#container-post");
 const viewMoreContainer = document.querySelector("#view-more-container");
+const sortOptions = document.querySelector("#sort-options");
+
+// Function to sort posts alphabetically by title
+function sortPostsAlphabetically(posts) {
+    return posts.sort((a, b) => {
+        const titleA = a.title.rendered.toLowerCase();
+        const titleB = b.title.rendered.toLowerCase();
+        if (titleA < titleB) return -1;
+        if (titleA > titleB) return 1;
+        return 0;
+    });
+}
+
+// Function to sort posts randomly
+function sortPostsRandomly(posts) {
+    return posts.sort(() => Math.random() - 0.5);
+}
+
+// Function to sort posts based on the selected option
+function sortPosts(posts, sortOption) {
+    switch (sortOption) {
+        case "alphabetical":
+            return sortPostsAlphabetically(posts);
+        case "random":
+            return sortPostsRandomly(posts);
+        // Add more cases for other sorting options if needed
+        default:
+            return posts;
+    }
+}
 
 export function displayPosts(posts, initialCount = 10) {
     if (resultContainer) {
@@ -53,11 +83,14 @@ export function displayPosts(posts, initialCount = 10) {
 
             resultContainer.innerHTML += remainingPostCards;
 
-            const viewMoreButton = document.createElement("button");
-            viewMoreButton.textContent = "View More";
-            viewMoreButton.classList.add("view-more-button");
-            viewMoreContainer.appendChild(viewMoreButton); // Append the button to the view-more-container
+            let viewMoreButton = document.querySelector(".view-more-button");
+            if (!viewMoreButton) {
+                viewMoreButton = document.createElement("button");
+                viewMoreButton.classList.add("view-more-button");
+                viewMoreContainer.appendChild(viewMoreButton); // Append the button to the view-more-container
+            }
 
+            viewMoreButton.textContent = "View More";
             let isShowingMore = false;
 
             viewMoreButton.addEventListener("click", () => {
@@ -93,8 +126,14 @@ async function fetchAndDisplayPosts() {
             throw new Error("Posts are not an array");
         }
 
+        // Get the selected sort option
+        const sortOption = sortOptions.value;
+
+        // Sort posts based on the selected option
+        const sortedPosts = sortPosts(posts, sortOption);
+
         resultContainer.innerHTML = "";
-        displayPosts(posts, 12); // Display only 12 posts initially
+        displayPosts(sortedPosts, 12); // Display only 12 posts initially
     } catch (error) {
         console.error(error);
         showErrorIndicator(error); // Show error indicator
@@ -105,3 +144,6 @@ async function fetchAndDisplayPosts() {
 
 // Fetch and display posts on page load
 document.addEventListener("DOMContentLoaded", fetchAndDisplayPosts);
+
+// Add event listener to sort options dropdown
+sortOptions.addEventListener("change", fetchAndDisplayPosts);

@@ -15,7 +15,6 @@ export async function fetchPosts() {
             throw new Error(`Error fetching posts: ${response.status}`);
         }
         const posts = await response.json();
-        console.log("Fetched posts:", posts); // Debugging log
         return posts; // Get the first 10 posts
     } catch (error) {
         console.error("Error in fetchPosts:", error);
@@ -29,10 +28,14 @@ export async function displayPosts() {
     // loadingIndicator.style.display = "block";
     errorIndicator.style.display = "none";
 
+
     const posts = await fetchPosts();
 
     // Hide loading indicator
     loadingIndicator.style.display = "none";
+
+    next.style.display = "inline-block";
+    prev.style.display = "inline-block";
 
     if (posts.length === 0) {
         console.error("No posts to display");
@@ -64,8 +67,6 @@ export async function displayPosts() {
 
     // Set initial scroll position to the first original item
     list.scrollLeft = (itemwidth + padding) * loopItems;
-
-    console.log("Posts displayed in carousel"); // Debugging log
 }
 
 // Function to create a carousel item
@@ -88,7 +89,6 @@ export function createCarouselItem(post) {
 
 // Initialize the carousel with posts
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM fully loaded and parsed"); // Debugging log
     displayPosts();
 
     prev.addEventListener("click", () => {

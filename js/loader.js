@@ -53,7 +53,7 @@ function loadCommonResources() {
 function loadResources() {
     const path = window.location.pathname;
     const page = path.split("/").pop();
-    console.log(`Current page: ${page}`);
+    (`Current page: ${page}`);
 
     // Load common resources
     loadCommonResources();
