@@ -15,6 +15,7 @@
 
 .post-card h3 {
     font-size: calc(0.5rem + 1vw);
+    margin-bottom: 0.5rem;
 }
 
 /* .post-card h2 {

@@ -8,7 +8,7 @@ const itemwidth = 230; // Fixed width of 230px
 const padding = 8; // Adjust padding if needed
 
 // Function to fetch posts (assuming this function is defined in another file)
-export async function fetchPosts() {
+async function fetchPosts() {
     try {
         const response = await fetch(`${url}?_embed&per_page=10`);
         if (!response.ok) {
@@ -23,11 +23,10 @@ export async function fetchPosts() {
 }
 
 // Function to create and insert post items into the carousel
-export async function displayPosts() {
+async function displayPosts() {
     // Show loading indicator
     // loadingIndicator.style.display = "block";
     errorIndicator.style.display = "none";
-
 
     const posts = await fetchPosts();
 
@@ -70,7 +69,7 @@ export async function displayPosts() {
 }
 
 // Function to create a carousel item
-export function createCarouselItem(post) {
+function createCarouselItem(post) {
     const item = document.createElement("a");
     item.href = `singlepost.html?id=${post.id}`;
     item.classList.add("carousel-item");
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Handle scroll events to create infinite loop effect
-export function handleScroll() {
+function handleScroll() {
     const totalItems = list.children.length;
     const loopItems = 3; // Number of items duplicated at each end
     const maxScrollLeft = (itemwidth + padding) * (totalItems - loopItems);
