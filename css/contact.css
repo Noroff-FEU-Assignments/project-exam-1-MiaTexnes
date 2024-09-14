@@ -61,6 +61,10 @@
     color: red;
     margin-top: 10px;
 }
+#successMessage {
+    color: green;
+    margin-top: 10px;
+}
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {

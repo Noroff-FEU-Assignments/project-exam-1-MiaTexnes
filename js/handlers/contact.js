@@ -9,6 +9,7 @@ document
         const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
         const errorMessages = document.getElementById("errorMessages");
+        const successMessage = document.getElementById("successMessage");
 
         let errors = [];
 
@@ -43,9 +44,16 @@ document
         // Display errors or success message
         if (errors.length > 0) {
             errorMessages.innerHTML = errors.join("<br>");
+            successMessage.innerHTML = ""; // Clear success message
         } else {
-            errorMessages.innerHTML = "Form submitted successfully!";
+            errorMessages.innerHTML = "";
+            successMessage.innerHTML = "Thank you for submitting your message!";
             // Clear the form fields
             document.getElementById("contactForm").reset();
+
+            // Optionally hide the success message after a few seconds
+            setTimeout(() => {
+                successMessage.innerHTML = "";
+            }, 5000); // Hide after 5 seconds
         }
     });
