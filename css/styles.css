@@ -1,19 +1,12 @@
 @import "variables.css";
 @import "main.css";
 @import "header.css";
-@import "mediaqueries.css";
 @import "api.css";
 @import "blog.css";
 @import "footer.css";
 @import "carousel.css";
 @import "contact.css";
-
-/* .top-header {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 38px;
-} */
+@import "errorAndLoading.css";
 
 .top-header {
     display: flex;
@@ -43,9 +36,10 @@ h1 {
 }
 
 .intro-text {
-    padding: 40px 20px 40px 30px;
+    padding: 40px 20px 40px 50px;
     text-align: center;
-    font-size: calc(1rem + 1vw);
+    font-size: calc(0.5rem + 1vw);
+    font-style: italic;
 }
 
 .index-intro img {
@@ -91,60 +85,6 @@ h1 {
     margin: 30px;
 }
 
-/* Container for the loading indicator */
-.indicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-}
-
-/* Loading indicator styles */
-#loadingIndicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 15px;
-    border: 5px solid green;
-    border-radius: 10px;
-    animation: pulse 1.5s infinite;
-    margin: 10px;
-}
-
-/* Error indicator styles */
-#errorIndicator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 15px;
-    border: 5px solid red;
-    border-radius: 10px;
-    animation: pulse 1.5s infinite;
-    margin: 10px;
-}
-
-/* Loading animation */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    }
-
     #sort-container {
         text-align: center;
 }
@@ -166,115 +106,18 @@ h1 {
     }
 }
 
-/* Styles for screens smaller than 825px (mobile) */
+/* Styles for screens smaller than 824px (mobile) */
 @media screen and (max-width: 824px) {
-    .navbar-desktop {
-        display: none; /* Hide desktop navbar on smaller screens */
-    }
-
     .post-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 40px;
         margin-bottom: 20px;
     }
-
-    .navbar-mobile {
-        display: none; /* Hide mobile navbar by default */
-        text-align: center;
-        position: absolute;
-        background-color: var(
-            --primary-main-green-color
-        ); /* Set your desired background color */
-        left: 0;
-        right: 0;
-        padding: 0;
-        margin: 0;
-        flex-direction: column; /* Ensure children are stacked vertically */
-        align-items: center; /* Center children horizontally */
-    }
-
-    .navbar-mobile a {
-        display: block;
-        padding: 25px 0px;
-        text-decoration: none;
-        text-align: center;
-        color: black;
-        font-weight: bold;
-        font-size: 25px;
-        overflow-x: hidden;
-    }
-
-    .navbar-mobile a.active {
-        text-decoration: underline;
-        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-    }
-
-    .header {
-        position: sticky;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(
-            --primary-main-green-color
-        ); /* Set your desired background color */
-        z-index: 1000; /* Ensure the header is on top */
-    }
-
-    .header-mobile {
-        position: relative; /* Ensure the link is positioned relative to the header */
-        background-color: var(--primary-main-green-color);
-        background-image: url(../images/mantislogo.png);
-        background-size: contain; /* Ensure the image fits within the container */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-        background-position: left; /* Position the image within the container */
-        height: 10vh;
-        justify-content: center;
-        padding: 10px 0px 10px 0px;
-    }
-
-    .header-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        text-decoration: none; /* Remove underline from the link */
-        z-index: 1; /* Ensure the link is on top of the header */
-    }
-
-    header {
-        padding-bottom: 15px;
-        display: block;
-    }
-
-    .header .image {
-        display: block;
-        z-index: 1001; /* Ensure the logo is on top of the header */
-    }
-
-    .hamburger-menu {
-        position: absolute;
-        top: 4%;
-        /* right: 8%; */
-        font-size: 2.3rem;
-        z-index: 10;
-        left: 80%;
-    }
-
-    .hamburger-menu-close {
-        position: absolute;
-        top: 4%;
-        /* right: 8%; */
-        font-size: 2.3rem;
-        display: none;
-        z-index: 10;
-        left: 80%;
-    }
-
-    nav {
-        padding-left: 15px;
+    body .index-intro {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
 }
 
@@ -295,7 +138,9 @@ h1 {
 
 /* Additional styles for different screen sizes */
 @media screen and (max-width: 630px) {
-    .navbar-mobile a {
-        font-size: 20px;
+    .top-header {
+        font-size: var(--h1-mobile-size);
     }
 }
+
+

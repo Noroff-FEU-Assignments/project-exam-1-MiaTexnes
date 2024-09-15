@@ -1,19 +1,3 @@
-/* Styles for screens larger than 825px (desktop) */
-@media screen and (min-width: 825px) {
-}
 
-/* Styles for screens smaller than 825px (mobile) */
-@media screen and (max-width: 824px) {
-    body .index-intro {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
-}
 
-/* Additional styles for different screen sizes */
-@media screen and (max-width: 630px) {
-    .top-header {
-        font-size: var(--h1-mobile-size);
-    }
-}
+
