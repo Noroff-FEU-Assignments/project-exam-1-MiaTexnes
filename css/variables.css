@@ -5,7 +5,7 @@
   --body-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --h1-desktop-size:font-size: 34px;
   --button-color: rgba(3, 129, 3, 0.788);
-  --h1-mobile-size:font-size: 16px;
-  --h3-desktop-size:font-size: 20px;
+  --h1-mobile-size:font-size: 20px;
+  --h3-desktop-size:font-size: 24px;
   --p-paragraphs-size: calc(0.5rem + 1vw);
 }
