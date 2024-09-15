@@ -43,19 +43,17 @@ h1 {
 }
 
 .intro-text {
-    padding: 30px;
+    padding: 40px 20px 40px 30px;
     text-align: center;
+    font-size: calc(1rem + 1vw);
 }
 
 .index-intro img {
     border-radius: 50%;
-    width: 100%;
-    height: auto;
     max-height: 30vh;
     max-width: 30vw;
-    justify-self: center; /* Center the image horizontally */
-    align-self: center; /* Center the image vertically */
-    padding-top: 0; /* Remove padding-top */
+    height: auto;
+
 }
 
 .contact-content {

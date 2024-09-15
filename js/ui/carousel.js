@@ -4,8 +4,7 @@ const next = document.querySelector("#next-btn");
 const list = document.querySelector("#item-list");
 const loadingIndicator = document.querySelector("#loadingIndicator");
 const errorIndicator = document.querySelector("#errorIndicator");
-const itemwidth = 230; // Fixed width of 230px
-const padding = 8; // Adjust padding if needed
+const itemwidth = 240; // Fixed width of 240px
 
 // Function to fetch posts (assuming this function is defined in another file)
 async function fetchPosts() {
@@ -25,7 +24,6 @@ async function fetchPosts() {
 // Function to create and insert post items into the carousel
 async function displayPosts() {
     // Show loading indicator
-    // loadingIndicator.style.display = "block";
     errorIndicator.style.display = "none";
 
     const posts = await fetchPosts();
@@ -65,7 +63,7 @@ async function displayPosts() {
     }
 
     // Set initial scroll position to the first original item
-    list.scrollLeft = (itemwidth + padding) * loopItems;
+    list.scrollLeft = (itemwidth) * loopItems;
 }
 
 // Function to create a carousel item
@@ -73,9 +71,7 @@ function createCarouselItem(post) {
     const item = document.createElement("a");
     item.href = `singlepost.html?id=${post.id}`;
     item.classList.add("carousel-item");
-    // item.style.width = `${itemwidth}px`;
     item.style.height = `300px`; // Fixed height of 300px
-    // item.style.padding = `${padding / 2}px`;
     const altText = post._embedded["wp:featuredmedia"][0].alt_text || "Image"; // Fetch alt text
     item.innerHTML = `
         <div class="post-card">
@@ -91,11 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
     displayPosts();
 
     prev.addEventListener("click", () => {
-        list.scrollLeft -= itemwidth + padding;
+        list.scrollLeft -= itemwidth;
         handleScroll();
     });
     next.addEventListener("click", () => {
-        list.scrollLeft += itemwidth + padding;
+        list.scrollLeft += itemwidth;
         handleScroll();
     });
 
@@ -106,13 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleScroll() {
     const totalItems = list.children.length;
     const loopItems = 3; // Number of items duplicated at each end
-    const maxScrollLeft = (itemwidth + padding) * (totalItems - loopItems);
+    const maxScrollLeft = (itemwidth) * (totalItems - loopItems);
 
     if (list.scrollLeft <= 0) {
         // Jump to the end of the original items
-        list.scrollLeft = maxScrollLeft - (itemwidth + padding) * loopItems;
-    } else if (list.scrollLeft >= maxScrollLeft - (itemwidth + padding)) {
+        list.scrollLeft = maxScrollLeft - (itemwidth) * loopItems;
+    } else if (list.scrollLeft >= maxScrollLeft - (itemwidth)) {
         // Jump to the beginning of the original items
-        list.scrollLeft = (itemwidth + padding) * loopItems;
+        list.scrollLeft = (itemwidth) * loopItems;
     }
 }

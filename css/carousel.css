@@ -2,19 +2,21 @@
 .carousel-container {
     overflow: visible;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-view {
     display: flex;
     align-items: center;
-    width: calc(240px * 4); /* Show 3 items at a time */
     margin: 0 auto; /* Center the carousel */
-    contain: layout style;
+    contain: layout;
 }
 
 #item-list {
     display: flex;
     scroll-behavior: smooth;
+    width: calc(240px * 4); /* Show 3 items at a time */
     height: 320px; /* Fixed height of 300px */
     overflow-x: visible;
     scrollbar-width: none; /* for Firefox */

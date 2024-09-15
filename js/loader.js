@@ -1,6 +1,3 @@
-
-
-
 // Function to dynamically load CSS files
 function loadCSS(href) {
     const link = document.createElement("link");
@@ -53,7 +50,7 @@ function loadCommonResources() {
 function loadResources() {
     const path = window.location.pathname;
     const page = path.split("/").pop();
-    (`Current page: ${page}`);
+    `Current page: ${page}`;
 
     // Load common resources
     loadCommonResources();
