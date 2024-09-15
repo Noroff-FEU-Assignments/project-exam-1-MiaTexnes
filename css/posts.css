@@ -54,7 +54,7 @@
     display: none;
 }
 
-.view-more-button {
+.view-more-button, .all-blogs {
     display: inline-block;
     padding: 0.5em 1.4em;
     margin: 0 0.3em 0.3em 0;
@@ -68,8 +68,15 @@
     transition: all 0.2s;
 }
 
-.view-more-button:hover {
+.view-more-button,.all-blogs:hover {
     box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.all-blogs-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px 0 20px 0; /* Optional: Add some space above the button */
 }
 
 /* Center the button */
