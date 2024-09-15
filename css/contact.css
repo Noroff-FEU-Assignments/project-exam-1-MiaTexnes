@@ -1,13 +1,13 @@
 #contact-page {
     display: flex;
     justify-content: center;
-    padding: 20px; /* Add some padding for better spacing */
+    padding: 20px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column; /* Align items vertically */
-    max-width: 600px; /* Increase the max width */
+    max-width: 600px;
     width: 100%; /* Ensure it takes full width of its container */
     padding: 20px;
     background-color: var(--primary-main-green-color);
@@ -37,7 +37,7 @@
 
 /* Specific rule for the textarea with ID message */
 #message {
-    height: 150px; /* Set the desired height */
+    height: 150px;
 }
 
 .contact-form button {
@@ -78,13 +78,13 @@
 @media (max-width: 768px) {
     .contact-form {
         max-width: 90%; /* Reduce max width for smaller screens */
-        padding: 15px; /* Adjust padding */
+        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-form {
         max-width: 100%; /* Full width for very small screens */
-        padding: 10px; /* Adjust padding */
+        padding: 10px;
     }
 }
