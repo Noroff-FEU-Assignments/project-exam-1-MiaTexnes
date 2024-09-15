@@ -91,6 +91,6 @@
     }
     #item-list {
         height: 320px; /* Fixed height of 320px */
-        width: calc(220px * 1.5); /* Show 1.5 item at a time */
+        width: calc(220px * 1); /* Show 1.5 item at a time */
     }
 }
