@@ -38,7 +38,7 @@ h1 {
 .intro-text {
     padding: 30px 20px 40px 50px;
     text-align: center;
-    font-size: calc(0.5rem + 1vw);
+    font-size: var(--p-paragraphs-size);
     font-style: italic;
 }
 
@@ -47,18 +47,7 @@ h1 {
     max-height: 30vh;
     max-width: 30vw;
     height: auto;
-
 }
-
-/* .wp-image-167 {
-    border-radius: 50%;
-    padding-top: 20px;
-    width: 100%;
-    height: auto;
-    max-height: 20vw;
-    max-width: 20vw;
-    margin: auto;
-} */
 
 .about-img {
     display: flex;
@@ -94,5 +83,3 @@ h1 {
         font-size: var(--h1-mobile-size);
     }
 }
-
-

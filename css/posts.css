@@ -54,7 +54,8 @@
     display: none;
 }
 
-.view-more-button, .all-blogs {
+.view-more-button,
+.all-blogs {
     display: inline-block;
     padding: 0.5em 1.4em;
     margin: 0 0.3em 0.3em 0;
@@ -68,7 +69,8 @@
     transition: all 0.2s;
 }
 
-.view-more-button,.all-blogs:hover {
+.view-more-button,
+.all-blogs:hover {
     box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -86,8 +88,8 @@
     margin: 20px 0 20px 0; /* Optional: Add some space above the button */
 }
 
-  #sort-container {
-        text-align: center;
+#sort-container {
+    text-align: center;
 }
 
 /* Media query for smaller screens */
@@ -105,4 +107,3 @@
         grid-template-columns: 2fr; /* Single column layout for very small screens */
     }
 }
-
