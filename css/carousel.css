@@ -76,21 +76,15 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 900px) {
-    .carousel-view {
-        /* width: calc(240px * 3); Show 3 items at a time */
-    }
     #item-list {
         height: 320px; /* Fixed height of 320px */
-        width: calc(240px * 2); /* Show 3 items at a time */
+        width: calc(240px * 2); /* Show 2 items at a time */
     }
 }
 
 @media (max-width: 600px) {
-    .carousel-view {
-        /* width: calc(220px * 1.5); Show 1.5 item at a time */
-    }
     #item-list {
         height: 320px; /* Fixed height of 320px */
-        width: calc(240px * 1); /* Show 1.5 item at a time */
+        width: calc(240px * 1); /* Show 1 item at a time */
     }
 }
