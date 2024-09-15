@@ -191,10 +191,26 @@ nav i {
     }
 }
 
-
 /* Additional styles for different screen sizes */
 @media screen and (max-width: 630px) {
     .navbar-mobile a {
         font-size: 20px;
+    }
+}
+
+/* Styles for screens larger than 825px (desktop) */
+@media screen and (min-width: 825px) {
+    .navbar-mobile {
+        display: none; /* Hide mobile navbar on large screens */
+    }
+    .navbar-desktop {
+        display: flex; /* Show desktop navbar on large screens */
+    }
+    #open,
+    #close {
+        display: none; /* Hide hamburger menu icons on large screens */
+    }
+    .hamburger-menu {
+        display: none;
     }
 }

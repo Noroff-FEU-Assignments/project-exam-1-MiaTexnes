@@ -6,22 +6,22 @@ function loadCSS(href) {
     document.head.appendChild(link);
 }
 
-// // Function to dynamically load JS files with optional defer or async attributes
-// function loadJS(src, type = "text/javascript", async = false, defer = false) {
-//     const script = document.createElement("script");
-//     script.src = src;
-//     script.type = type;
-//     if (async) {
-//         script.async = true;
-//     }
-//     if (defer) {
-//         script.defer = true;
-//     }
-//     script.onerror = function () {
-//         console.error(`Failed to load script: ${src}`);
-//     };
-//     document.head.appendChild(script);
-// }
+// Function to dynamically load JS files with optional defer or async attributes
+function loadJS(src, type = "text/javascript", async = false, defer = false) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.type = type;
+    if (async) {
+        script.async = true;
+    }
+    if (defer) {
+        script.defer = true;
+    }
+    script.onerror = function () {
+        console.error(`Failed to load script: ${src}`);
+    };
+    document.head.appendChild(script);
+}
 
 // Function to dynamically load preconnect links
 function loadPreconnect(href, crossorigin = false) {
@@ -44,13 +44,20 @@ function loadCommonResources() {
     loadCSS(
         "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     );
+
+    // Load Iconify script
+    loadJS(
+        "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+        "text/javascript",
+        true
+    );
 }
 
 // Function to load resources based on the current page
 function loadResources() {
     const path = window.location.pathname;
     const page = path.split("/").pop();
-    `Current page: ${page}`;
+    console.log(`Current page: ${page}`);
 
     // Load common resources
     loadCommonResources();
@@ -69,6 +76,15 @@ function loadResources() {
         r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+
+    // Change the title based on the id parameter in the URL
+    if (page === "singlepost.html") {
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get("id");
+        if (postId) {
+            document.title = `Post ${postId} - Mantis World`;
+        }
+    }
 }
 
 // Load resources when the DOM is fully loaded

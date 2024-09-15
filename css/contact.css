@@ -66,6 +66,12 @@
     margin-top: 10px;
 }
 
+.contact-content {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .contact-form {

@@ -1,8 +1,8 @@
 @import "variables.css";
 @import "main.css";
 @import "header.css";
-@import "api.css";
-@import "blog.css";
+@import "posts.css";
+@import "singlePost.css";
 @import "footer.css";
 @import "carousel.css";
 @import "contact.css";
@@ -50,13 +50,7 @@ h1 {
 
 }
 
-.contact-content {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-}
-
-.wp-image-167 {
+/* .wp-image-167 {
     border-radius: 50%;
     padding-top: 20px;
     width: 100%;
@@ -64,7 +58,7 @@ h1 {
     max-height: 20vw;
     max-width: 20vw;
     margin: auto;
-}
+} */
 
 .about-img {
     display: flex;
@@ -85,54 +79,12 @@ h1 {
     margin: 30px;
 }
 
-    #sort-container {
-        text-align: center;
-}
-
-/* Styles for screens larger than 825px (desktop) */
-@media screen and (min-width: 825px) {
-    .navbar-mobile {
-        display: none; /* Hide mobile navbar on large screens */
-    }
-    .navbar-desktop {
-        display: flex; /* Show desktop navbar on large screens */
-    }
-    #open,
-    #close {
-        display: none; /* Hide hamburger menu icons on large screens */
-    }
-    .hamburger-menu {
-        display: none;
-    }
-}
-
 /* Styles for screens smaller than 824px (mobile) */
 @media screen and (max-width: 824px) {
-    .post-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 40px;
-        margin-bottom: 20px;
-    }
     body .index-intro {
         flex-direction: column;
         gap: 10px;
         padding: 10px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .post-grid {
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container-post {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 }
 
