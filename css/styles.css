@@ -78,8 +78,8 @@ h1 {
 }
 
 /* Additional styles for different screen sizes */
-@media screen and (max-width: 630px) {
+/* @media screen and (max-width: 630px) {
     .top-header {
         font-size: var(--h1-mobile-size);
     }
-}
+} */
