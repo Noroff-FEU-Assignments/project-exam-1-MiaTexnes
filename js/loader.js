@@ -76,15 +76,6 @@ function loadResources() {
         r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
     })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-
-    // Change the title based on the id parameter in the URL
-    if (page === "singlepost.html") {
-        const urlParams = new URLSearchParams(window.location.search);
-        const postId = urlParams.get("id");
-        if (postId) {
-            document.title = `Post ${postId} - Mantis World`;
-        }
-    }
 }
 
 // Load resources when the DOM is fully loaded
