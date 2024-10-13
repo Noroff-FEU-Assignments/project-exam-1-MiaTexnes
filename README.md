@@ -1,4 +1,30 @@
-## Project Exam 1
+# Project Exam 1
+
+Made by Mia Parken Texnes
+(https://mantis-world.netlify.app/)
+
+<p align="center">
+  <img width="500" height="100%" src="/images/mantislogo.png">
+</p>
+
+First year project to create Project Exam 1 blog featuring different mantises.
+
+## The site architecture for my site became the following:
+
+1. Home – Index page with carousel and intro
+2. Blogs – A page with all the different blogs
+3. About – About the website
+4. Contact – A contact form
+5. Blog specific page – A page for each blog post
+
+## The site was built with:
+
+- [HTML]
+- [CSS]
+- [JS]
+- [Wordpress]
+- [API's]
+
 
 ## Goal
 
@@ -38,7 +64,7 @@ Please use JavaScript for validation, show error messages if the values in the t
 
 ### WordPress
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data.
 
 The project has two aspects:
 -	API from your WordPress installation
@@ -52,17 +78,17 @@ Note that this is an exam, and therefore tutor support will be limited as per th
 
 1.	Decide on the theme for the blog you’re going to make
 2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
+3.	Install WordPress on your web host and add the blogs on the admin panel.
 4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
 5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
 6.	Install Hotjar on your website.
 7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
 8.	Write a report documenting your project (template provided in this repository).
 9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
+
 ## Level 2 Process (optional)
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
+1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for.
 2.	Post the data from the contact form to WordPress so you have the details saved.
 3.	Allow users to submit comments on a blog post, and post this data to WordPress
 
