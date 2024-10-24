@@ -8,6 +8,12 @@
 @import "contact.css";
 @import "errorAndLoading.css";
 
+/* 24.10.2024 */
+.containerIndex {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .top-header {
     display: flex;
     justify-content: center;
