@@ -1,98 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mantis World | All Posts</title>
-        <meta
-            name="description"
-            content="Mantis World blog page showing all the current blog posts"
-        />
-        <script src="js/loader.js"></script>
-        <script src="js/handlers/allPosts.js" type="module"></script>
-        <script src="js/ui/nav.js" type="module"></script>
-    </head>
-    <body>
-        <header>
-            <div class="header-mobile">
-                <a href="index.html" class="header-link"></a>
-            </div>
-            <i id="open" class="hamburger-menu">
-                <iconify-icon icon="pajamas:hamburger"></iconify-icon>
-            </i>
-            <i id="close" class="hamburger-menu-close">
-                <iconify-icon icon="pajamas:close"></iconify-icon>
-            </i>
-            <nav class="navbar-desktop">
-                <a href="index.html">Home</a>
-                <a href="blogs.html" class="active">Blogs</a>
-                <div class="header-image">
-                    <a href="index.html">
-                        <img
-                            class="mantislogo"
-                            src="images/mantislogo.png"
-                            alt="Mantis World Logo"
-                        />
-                    </a>
-                </div>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <nav class="navbar-mobile">
-                <a href="index.html">Home</a>
-                <a href="blogs.html" class="active">Blogs</a>
-                <div class="header-image"></div>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-        <main>
-            <div class="indicator">
-                <div id="loadingIndicator">Loading...</div>
-            </div>
-            <div id="errorIndicator" class="indicator" style="display: none">
-                An error has occurred. Please try again.
-            </div>
-            <h1 class="top-header">All Posts</h1>
-            <div id="sort-container">
-                <label for="sort-options">Sort by:</label>
-                <select id="sort-options">
-                    <option value="random">Random</option>
-                    <option value="alphabetical">alphabetical</option>
-                    <!-- Add more sorting options here if needed -->
-                </select>
-            </div>
-            <div id="container-post" class="container-post"></div>
-            <div class="post-grid"></div>
-            <div id="view-more-container"></div>
-        </main>
-        <footer>
-            <div class="footer">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <a href="index.html"
-                            ><img
-                                src="images/mantislogo.png"
-                                alt="Mantis World Logo"
-                            />
-                        </a>
-                    </div>
-                    <h2 class="copyright-text">
-                        All rights reserved Mantis World 2024
-                    </h2>
-                    <div class="social-media">
-                        <a
-                            href="https://github.com/Noroff-FEU-Assignments/project-exam-1-MiaTexnes/tree/project-exam-1-mia"
-                            ><span class="bxl--github"></span
-                        ></a>
-                        <a
-                            href="https://www.linkedin.com/in/mia-texnes-847b28bb/"
-                            ><span class="bxl--linkedin-square"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantis World | All Posts</title>
+    <meta
+      name="description"
+      content="Mantis World blog page showing all the current blog posts"
+    />
+    <script src="js/loader.js"></script>
+    <script src="js/handlers/allPosts.js" type="module"></script>
+    <script src="js/ui/nav.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-mobile">
+        <a href="index.html" class="header-link"></a>
+      </div>
+      <i id="open" class="hamburger-menu">
+        <iconify-icon icon="pajamas:hamburger"></iconify-icon>
+      </i>
+      <i id="close" class="hamburger-menu-close">
+        <iconify-icon icon="pajamas:close"></iconify-icon>
+      </i>
+      <nav class="navbar-desktop">
+        <a href="index.html">Home</a>
+        <a href="blogs.html" class="active">Blogs</a>
+        <div class="header-image">
+          <a href="index.html">
+            <img
+              class="mantislogo"
+              src="images/mantislogo.png"
+              alt="Mantis World Logo"
+            />
+          </a>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav class="navbar-mobile">
+        <a href="index.html">Home</a>
+        <a href="blogs.html" class="active">Blogs</a>
+        <div class="header-image"></div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <div class="indicator">
+        <div id="loadingIndicator">Loading...</div>
+      </div>
+      <div id="errorIndicator" class="indicator" style="display: none">
+        An error has occurred. Please try again.
+      </div>
+      <h1 class="top-header">All Posts</h1>
+      <div id="sort-container">
+        <label for="sort-options">Sort by:</label>
+        <select id="sort-options">
+          <option value="random">Random</option>
+          <option value="alphabetical">alphabetical</option>
+          <!-- Add more sorting options here if needed -->
+        </select>
+      </div>
+      <div id="container-post" class="container-post"></div>
+      <div class="post-grid"></div>
+      <div id="view-more-container"></div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="index.html"
+              ><img src="images/mantislogo.png" alt="Mantis World Logo" />
+            </a>
+          </div>
+          <h2 class="copyright-text">All rights reserved Mantis World 2024</h2>
+          <div class="social-media">
+            <a
+              href="https://github.com/Noroff-FEU-Assignments/project-exam-1-MiaTexnes/tree/project-exam-1-mia"
+              ><span class="bxl--github"></span
+            ></a>
+            <a href="https://www.linkedin.com/in/mia-texnes-847b28bb/"
+              ><span class="bxl--linkedin-square"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,109 +1,109 @@
 .post-card {
-    text-align: center;
-    margin: 1rem; /* Adjusted margin for consistency */
-    padding: 1rem;
-    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 10%;
-    transition: box-shadow 0.3s ease-in-out;
-    background-color: rgba(150, 217, 150, 0.352);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensure content is spaced evenly */
-    height: 100%; /* Ensure the card takes full height of its container */
-    font-size: var(--h3-desktop-size); /* Adjusted font size for consistency */
-    max-width: 380px;
+  text-align: center;
+  margin: 1rem; /* Adjusted margin for consistency */
+  padding: 1rem;
+  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: rgba(150, 217, 150, 0.352);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced evenly */
+  height: 100%; /* Ensure the card takes full height of its container */
+  font-size: var(--h3-desktop-size); /* Adjusted font size for consistency */
+  max-width: 380px;
 }
 
 .post-card h3 {
-    font-size: calc(0.5rem + 1vw);
-    margin-bottom: 0.5rem;
+  font-size: calc(0.5rem + 1vw);
+  margin-bottom: 0.5rem;
 }
 
 .post-card:hover {
-    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 #container-post * {
-    text-decoration: none !important;
-    color: black;
+  text-decoration: none !important;
+  color: black;
 }
 
 .post-grid {
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(300px, 1fr)
-    ); /* Ensure equal width columns */
-    grid-gap: 20px;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Ensure equal width columns */
+  grid-gap: 20px;
+  margin-bottom: 20px;
 }
 
 .post-grid .post {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .post-card img {
-    flex: 1;
-    text-align: center;
-    max-width: 100%; /* Make the image responsive */
-    max-height: 300px;
-    border-radius: 10%;
+  flex: 1;
+  text-align: center;
+  max-width: 100%; /* Make the image responsive */
+  max-height: 300px;
+  border-radius: 10%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .view-more-button,
 .all-blogs {
-    display: inline-block;
-    padding: 0.5em 1.4em;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: bolder;
-    background-color: var(--primary-main-green-color);
-    text-align: center;
-    transition: all 0.2s;
+  display: inline-block;
+  padding: 0.5em 1.4em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  background-color: var(--primary-main-green-color);
+  text-align: center;
+  transition: all 0.2s;
 }
 
 .view-more-button:hover,
 .all-blogs:hover {
-    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.5);
 }
 
 .all-blogs-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 20px 0 20px 0;
 }
 
 /* Center the button */
 #view-more-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
 }
 
 #sort-container {
-    text-align: center;
+  text-align: center;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    .post-grid {
-        grid-template-columns: repeat(
-            auto-fill,
-            minmax(200px, 1fr)
-        ); /* Adjust for smaller screens */
-    }
+  .post-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Adjust for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-    .post-grid {
-        grid-template-columns: 2fr; /* Single column layout for very small screens */
-    }
+  .post-grid {
+    grid-template-columns: 2fr; /* Single column layout for very small screens */
+  }
 }

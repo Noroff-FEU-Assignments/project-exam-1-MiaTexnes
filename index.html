@@ -1,125 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mantis World | Home</title>
-        <meta
-            name="description"
-            content="Mantis World is a blog about different kind of mantises and how cool they are"
-        />
-        <script src="js/loader.js"></script>
-        <script src="js/ui/carousel.js" type="module"></script>
-        <script src="js/ui/nav.js" type="module"></script>
-    </head>
-    <body>
-        <header>
-            <div class="header-mobile">
-                <a href="index.html" class="header-link"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantis World | Home</title>
+    <meta
+      name="description"
+      content="Mantis World is a blog about different kind of mantises and how cool they are"
+    />
+    <script src="js/loader.js"></script>
+    <script src="js/ui/carousel.js" type="module"></script>
+    <script src="js/ui/nav.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-mobile">
+        <a href="index.html" class="header-link"></a>
+      </div>
+      <i id="open" class="hamburger-menu">
+        <iconify-icon icon="pajamas:hamburger"></iconify-icon>
+      </i>
+      <i id="close" class="hamburger-menu-close">
+        <iconify-icon icon="pajamas:close"></iconify-icon>
+      </i>
+      <nav class="navbar-desktop">
+        <a href="index.html" class="active">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <div class="header-image">
+          <a href="index.html">
+            <img
+              class="mantislogo"
+              src="images/mantislogo.png"
+              alt="Mantis World Logo"
+            />
+          </a>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav class="navbar-mobile">
+        <a href="index.html" class="active">Home</a>
+        <a href="blogs.html">Blogs</a>
+        <div class="header-image"></div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <div class="containerIndex">
+        <h1 class="top-header">Welcome to Mantis World!</h1>
+        <div class="index-intro">
+          <p class="intro-text">
+            Explore the extraordinary world of mantises with us. Discover the
+            beauty, diversity, and fascinating behaviors of these incredible
+            insects. From vibrant colors to unique adaptations, each mantis has
+            a story to tell. Dive in and be amazed!
+          </p>
+          <img
+            src="images/conehead1.jpg"
+            alt="A pink, green, black and yellow mantis standing up"
+          />
+        </div>
+        <h2 class="latest-posts">Latest Posts</h2>
+        <div class="indicator">
+          <div id="loadingIndicator">Loading...</div>
+        </div>
+        <div id="errorIndicator" class="indicator">
+          An error has occurred. Please try again.
+        </div>
+        <div class="carousel-container">
+          <div class="carousel-view">
+            <button id="prev-btn" class="prev-btn">
+              <iconify-icon
+                class="arrow-left"
+                icon="pajamas:arrow-left"
+              ></iconify-icon>
+            </button>
+            <div id="item-list" class="item-list">
+              <!--Items will be dynamically inserted here-->
             </div>
-            <i id="open" class="hamburger-menu">
-                <iconify-icon icon="pajamas:hamburger"></iconify-icon>
-            </i>
-            <i id="close" class="hamburger-menu-close">
-                <iconify-icon icon="pajamas:close"></iconify-icon>
-            </i>
-            <nav class="navbar-desktop">
-                <a href="index.html" class="active">Home</a>
-                <a href="blogs.html">Blogs</a>
-                <div class="header-image">
-                    <a href="index.html">
-                        <img
-                            class="mantislogo"
-                            src="images/mantislogo.png"
-                            alt="Mantis World Logo"
-                        />
-                    </a>
-                </div>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <nav class="navbar-mobile">
-                <a href="index.html" class="active">Home</a>
-                <a href="blogs.html">Blogs</a>
-                <div class="header-image"></div>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-        <main>
-            <div class="containerIndex">
-            <h1 class="top-header">Welcome to Mantis World!</h1>
-            <div class="index-intro">
-                <p class="intro-text">
-                    Explore the extraordinary world of mantises with us.
-                    Discover the beauty, diversity, and fascinating behaviors of
-                    these incredible insects. From vibrant colors to unique
-                    adaptations, each mantis has a story to tell. Dive in and be
-                    amazed!
-                </p>
-                <img
-                    src="images/conehead1.jpg"
-                    alt="A pink, green, black and yellow mantis standing up"
-                />
-            </div>
-            <h2 class="latest-posts">Latest Posts</h2>
-            <div class="indicator">
-                <div id="loadingIndicator">Loading...</div>
-            </div>
-            <div id="errorIndicator" class="indicator">
-                An error has occurred. Please try again.
-            </div>
-            <div class="carousel-container">
-                <div class="carousel-view">
-                    <button id="prev-btn" class="prev-btn">
-                        <iconify-icon
-                            class="arrow-left"
-                            icon="pajamas:arrow-left"
-                        ></iconify-icon>
-                    </button>
-                    <div id="item-list" class="item-list">
-                        <!--Items will be dynamically inserted here-->
-                    </div>
-                    <button id="next-btn" class="next-btn">
-                        <iconify-icon
-                            class="arrow-right"
-                            icon="pajamas:arrow-right"
-                        ></iconify-icon>
-                    </button>
-                </div>
-            </div>
-            <div class="all-blogs-container">
-                <a href="blogs.html" class="all-blogs">View All Posts</a>
-            </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer">
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <a href="index.html"
-                            ><img
-                                src="images/mantislogo.png"
-                                alt="Mantis World Logo"
-                            />
-                        </a>
-                    </div>
-                    <h3 class="copyright-text">
-                        All rights reserved Mantis World 2024
-                    </h3>
-                    <div class="social-media">
-                        <a
-                            href="https://github.com/Noroff-FEU-Assignments/project-exam-1-MiaTexnes/tree/project-exam-1-mia"
-                            ><span class="bxl--github"></span
-                        ></a>
-                        <a
-                            href="https://www.linkedin.com/in/mia-texnes-847b28bb/"
-                            ><span class="bxl--linkedin-square"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </body>
+            <button id="next-btn" class="next-btn">
+              <iconify-icon
+                class="arrow-right"
+                icon="pajamas:arrow-right"
+              ></iconify-icon>
+            </button>
+          </div>
+        </div>
+        <div class="all-blogs-container">
+          <a href="blogs.html" class="all-blogs">View All Posts</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="index.html"
+              ><img src="images/mantislogo.png" alt="Mantis World Logo" />
+            </a>
+          </div>
+          <h3 class="copyright-text">All rights reserved Mantis World 2024</h3>
+          <div class="social-media">
+            <a
+              href="https://github.com/Noroff-FEU-Assignments/project-exam-1-MiaTexnes/tree/project-exam-1-mia"
+              ><span class="bxl--github"></span
+            ></a>
+            <a href="https://www.linkedin.com/in/mia-texnes-847b28bb/"
+              ><span class="bxl--linkedin-square"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

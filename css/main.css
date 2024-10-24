@@ -1,16 +1,16 @@
 * {
-    font-family: var(--body-font-family);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    color: black;
+  font-family: var(--body-font-family);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: black;
 }
 
 body {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    font-size: var(--p-paragraphs-size);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-size: var(--p-paragraphs-size);
 }

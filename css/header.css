@@ -1,211 +1,207 @@
 /* Header section */
 header {
-    color: black;
-    width: 100%;
-    outline-offset: 0px;
-    background-color: var(--primary-main-green-color);
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding-left: 15px;
+  color: black;
+  width: 100%;
+  outline-offset: 0px;
+  background-color: var(--primary-main-green-color);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 15px;
 }
 
 .navbar {
-    display: none;
+  display: none;
 }
 
 .navbar-desktop {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-evenly;
-    gap: 30px;
-    margin-right: 15px;
-    margin-left: 15px;
-    font-family: var(--header-font-family);
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: var(--header-font-family);
+  font-weight: 500;
 }
 
 .navbar-desktop a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #000000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000000;
 }
 
 nav i {
-    transform: scale(1);
-    padding: 2px;
+  transform: scale(1);
+  padding: 2px;
 }
 
 nav a:hover {
-    color: #000000;
-    text-decoration: underline;
+  color: #000000;
+  text-decoration: underline;
 }
 
 .navbar-desktop .active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .mantislogo {
-    padding: 10px;
-    position: static;
+  padding: 10px;
+  position: static;
 }
 
 nav i {
-    color: black;
+  color: black;
 }
 
 .header {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
 .div1 {
-    grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 1 / 2 / 2;
 }
 .div2 {
-    grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .mantislogo {
-    grid-area: 1 / 3 / 2 / 4;
+  grid-area: 1 / 3 / 2 / 4;
 }
 .div4 {
-    grid-area: 1 / 4 / 2 / 5;
+  grid-area: 1 / 4 / 2 / 5;
 }
 .div5 {
-    grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 5 / 2 / 6;
 }
 
 .mantislogo {
-    width: 200px;
+  width: 200px;
 }
 
 /* Styles for screens smaller than 824px (mobile) */
 @media screen and (max-width: 824px) {
-    .navbar-desktop {
-        display: none; /* Hide desktop navbar on smaller screens */
-    }
+  .navbar-desktop {
+    display: none; /* Hide desktop navbar on smaller screens */
+  }
 
-    .navbar-mobile {
-        display: none; /* Hide mobile navbar by default */
-        text-align: center;
-        position: absolute;
-        background-color: var(
-            --primary-main-green-color
-        );
-        left: 0;
-        right: 0;
-        padding: 0;
-        margin: 0;
-        flex-direction: column;
-        align-items: center;
-    }
+  .navbar-mobile {
+    display: none; /* Hide mobile navbar by default */
+    text-align: center;
+    position: absolute;
+    background-color: var(--primary-main-green-color);
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .navbar-mobile a {
-        display: block;
-        padding: 25px 0px;
-        text-decoration: none;
-        text-align: center;
-        color: black;
-        font-weight: bold;
-        font-size: 25px;
-        overflow-x: hidden;
-    }
+  .navbar-mobile a {
+    display: block;
+    padding: 25px 0px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    overflow-x: hidden;
+  }
 
-    .navbar-mobile a.active {
-        text-decoration: underline;
-        transform: matrix(1.1, 0, 0, 1.1, 0, 0);
-    }
+  .navbar-mobile a.active {
+    text-decoration: underline;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+  }
 
-    .header {
-        position: sticky;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(
-            --primary-main-green-color
-        );
-        z-index: 1000; /* Ensure the header is on top */
-    }
+  .header {
+    position: sticky;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-main-green-color);
+    z-index: 1000; /* Ensure the header is on top */
+  }
 
-    .header-mobile {
-        position: relative;
-        background-color: var(--primary-main-green-color);
-        background-image: url(../images/mantislogo.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: left;
-        height: 10vh;
-        justify-content: center;
-        padding: 10px 0px 10px 0px;
-    }
+  .header-mobile {
+    position: relative;
+    background-color: var(--primary-main-green-color);
+    background-image: url(../images/mantislogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 10vh;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+  }
 
-    .header-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        text-decoration: none;
-        z-index: 1;
-    }
+  .header-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    z-index: 1;
+  }
 
-    header {
-        padding-bottom: 15px;
-        display: block;
-    }
+  header {
+    padding-bottom: 15px;
+    display: block;
+  }
 
-    .header .image {
-        display: block;
-        z-index: 1001;
-    }
+  .header .image {
+    display: block;
+    z-index: 1001;
+  }
 
-    .hamburger-menu {
-        position: absolute;
-        top: 4%;
-        font-size: 2.3rem;
-        z-index: 10;
-        left: 80%;
-    }
+  .hamburger-menu {
+    position: absolute;
+    top: 4%;
+    font-size: 2.3rem;
+    z-index: 10;
+    left: 80%;
+  }
 
-    .hamburger-menu-close {
-        position: absolute;
-        top: 4%;
-        font-size: 2.3rem;
-        display: none;
-        z-index: 10;
-        left: 80%;
-    }
+  .hamburger-menu-close {
+    position: absolute;
+    top: 4%;
+    font-size: 2.3rem;
+    display: none;
+    z-index: 10;
+    left: 80%;
+  }
 
-    nav {
-        padding-left: 15px;
-    }
+  nav {
+    padding-left: 15px;
+  }
 }
 
 /* Additional styles for different screen sizes */
 @media screen and (max-width: 630px) {
-    .navbar-mobile a {
-        font-size: 20px;
-    }
+  .navbar-mobile a {
+    font-size: 20px;
+  }
 }
 
 /* Styles for screens larger than 825px (desktop) */
 @media screen and (min-width: 825px) {
-    .navbar-mobile {
-        display: none; /* Hide mobile navbar on large screens */
-    }
-    .navbar-desktop {
-        display: flex; /* Show desktop navbar on large screens */
-    }
-    #open,
-    #close {
-        display: none; /* Hide hamburger menu icons on large screens */
-    }
-    .hamburger-menu {
-        display: none;
-    }
+  .navbar-mobile {
+    display: none; /* Hide mobile navbar on large screens */
+  }
+  .navbar-desktop {
+    display: flex; /* Show desktop navbar on large screens */
+  }
+  #open,
+  #close {
+    display: none; /* Hide hamburger menu icons on large screens */
+  }
+  .hamburger-menu {
+    display: none;
+  }
 }
